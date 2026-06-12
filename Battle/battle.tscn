@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cn800l1leinwm"]
+
+[ext_resource type="Script" uid="uid://vp8a6c0i3v4m" path="res://Battle/battle.gd" id="1_ac2hh"]
+
+[sub_resource type="Theme" id="Theme_ac2hh"]
+
+[node name="Battle" type="Control" unique_id=1049319393]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ac2hh")
+script = ExtResource("1_ac2hh")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="ColorRect" parent="." unique_id=1215669068]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=137983303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=912274550]
+layout_mode = 2
