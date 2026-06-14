@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cn800l1leinwm"]
 
 [ext_resource type="Script" uid="uid://vp8a6c0i3v4m" path="res://Battle/battle.gd" id="1_ac2hh"]
-
-[sub_resource type="Theme" id="Theme_ac2hh"]
+[ext_resource type="Theme" uid="uid://bmw5qp4hswumx" path="res://Battle/base_theme.tres" id="1_ksnli"]
+[ext_resource type="Texture2D" uid="uid://cp0x14jxjlqmq" path="res://GUI/Art/gui_frame.png" id="3_do635"]
+[ext_resource type="PackedScene" uid="uid://18m0rrc64sxu" path="res://Battle/EnemyButton.tscn" id="4_5pv0p"]
 
 [node name="Battle" type="Control" unique_id=1049319393]
 layout_mode = 3
@@ -11,9 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_ac2hh")
+theme = ExtResource("1_ksnli")
 script = ExtResource("1_ac2hh")
-metadata/_edit_lock_ = true
 
 [node name="Background" type="ColorRect" parent="." unique_id=1215669068]
 layout_mode = 1
@@ -32,6 +32,93 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=912274550]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1458753996]
 layout_mode = 2
+
+[node name="InfoPane" type="NinePatchRect" parent="MarginContainer/VBoxContainer" unique_id=2103349452]
+layout_mode = 2
+texture = ExtResource("3_do635")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Combatants" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=468157582]
+layout_mode = 2
+
+[node name="EnemyRow3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Combatants" unique_id=1116527513]
+layout_mode = 2
+
+[node name="EnemyRow2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Combatants" unique_id=756675158]
+layout_mode = 2
+
+[node name="EnemyRow1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Combatants" unique_id=1999198341]
+layout_mode = 2
+
+[node name="EnemyButton2" parent="MarginContainer/VBoxContainer/Combatants/EnemyRow1" unique_id=1505026012 instance=ExtResource("4_5pv0p")]
+layout_mode = 2
+
+[node name="EnemyButton" parent="MarginContainer/VBoxContainer/Combatants/EnemyRow1" unique_id=74103270 instance=ExtResource("4_5pv0p")]
+layout_mode = 2
+
+[node name="EnemyButton3" parent="MarginContainer/VBoxContainer/Combatants/EnemyRow1" unique_id=108305933 instance=ExtResource("4_5pv0p")]
+layout_mode = 2
+
+[node name="PartyRow1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Combatants" unique_id=648858808]
+layout_mode = 2
+
+[node name="PartyRow2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Combatants" unique_id=352656006]
+layout_mode = 2
+
+[node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=917781454]
+layout_mode = 2
+
+[node name="Actions" type="NinePatchRect" parent="MarginContainer/VBoxContainer/Bottom" unique_id=1567561017]
+custom_minimum_size = Vector2(108, 44)
+layout_mode = 2
+texture = ExtResource("3_do635")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Bottom/Actions" unique_id=184915853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer" unique_id=2014271974]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/VBoxContainer" unique_id=1565336346]
+layout_mode = 2
+text = "ATTACK"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/VBoxContainer" unique_id=459202937]
+layout_mode = 2
+text = "ATTACK"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/VBoxContainer" unique_id=1291011357]
+layout_mode = 2
+text = "ATTACK"
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/VBoxContainer" unique_id=279824448]
+layout_mode = 2
+text = "ATTACK"
+
+[node name="PartyStats" type="NinePatchRect" parent="MarginContainer/VBoxContainer/Bottom" unique_id=9584922]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+texture = ExtResource("3_do635")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8

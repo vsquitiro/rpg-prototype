@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://bmw5qp4hswumx"]
+
+[ext_resource type="FontFile" uid="uid://dd2k0ujtcfsob" path="res://press-start-2p-font/PressStart2P-vaV7.ttf" id="1_umptp"]
+
+[resource]
+default_font = ExtResource("1_umptp")
+default_font_size = 8
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://18m0rrc64sxu"]
+
+[ext_resource type="Texture2D" uid="uid://dl0s4grwb1pnn" path="res://Battle/Enemies/monster_bat.png" id="1_5h1th"]
+[ext_resource type="Script" uid="uid://o2us7nk0j0x3" path="res://Battle/enemy_button.gd" id="2_igefw"]
+
+[node name="EnemyButton" type="TextureButton" unique_id=1505026012]
+texture_normal = ExtResource("1_5h1th")
+script = ExtResource("2_igefw")
