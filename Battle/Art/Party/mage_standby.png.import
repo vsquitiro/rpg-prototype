@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl0s4grwb1pnn"
-path="res://.godot/imported/monster_bat.png-675403258c421203c4aa2d3f6e06fb74.ctex"
+uid="uid://buabnbpgmyunc"
+path="res://.godot/imported/mage_standby.png-9522fc55ed2f205b0dced8e15af8b818.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/Enemies/monster_bat.png"
-dest_files=["res://.godot/imported/monster_bat.png-675403258c421203c4aa2d3f6e06fb74.ctex"]
+source_file="res://Battle/Art/Party/mage_standby.png"
+dest_files=["res://.godot/imported/mage_standby.png-9522fc55ed2f205b0dced8e15af8b818.ctex"]
 
 [params]
 
