@@ -4,8 +4,11 @@
 [ext_resource type="Theme" uid="uid://bmw5qp4hswumx" path="res://Battle/base_theme.tres" id="1_ksnli"]
 [ext_resource type="Texture2D" uid="uid://cp0x14jxjlqmq" path="res://GUI/Art/gui_frame.png" id="3_do635"]
 [ext_resource type="PackedScene" uid="uid://18m0rrc64sxu" path="res://Battle/EnemyButton.tscn" id="4_5pv0p"]
-[ext_resource type="Texture2D" uid="uid://buabnbpgmyunc" path="res://Battle/Art/Party/mage_standby.png" id="5_ploow"]
-[ext_resource type="Texture2D" uid="uid://d1xqfqm5n5c0h" path="res://Battle/Art/Party/knight_standby.png" id="6_0lqow"]
+[ext_resource type="Texture2D" uid="uid://cnlb0qmlid4nt" path="res://Battle/Art/Placeholder/hex_placeholder_enemy_shadow.png" id="5_bjo3u"]
+[ext_resource type="Texture2D" uid="uid://c6ju1qpmct862" path="res://Battle/Art/Placeholder/full_placeholder_enemy_shadow.png" id="6_ihngk"]
+[ext_resource type="Texture2D" uid="uid://b66jl8o8oob3t" path="res://Battle/Art/Placeholder/hex_placeholder_player_shadow.png" id="7_ihngk"]
+[ext_resource type="Texture2D" uid="uid://8yii82kq6w1d" path="res://Battle/Art/Placeholder/mage_placeholder_player_shadow.png" id="8_yhs05"]
+[ext_resource type="Texture2D" uid="uid://b2ygrmpy57ha3" path="res://Battle/Art/Placeholder/knight_placeholder_player_shadow.png" id="9_yrmgv"]
 
 [node name="Battle" type="Control" unique_id=1049319393]
 layout_mode = 3
@@ -64,72 +67,105 @@ vertical_alignment = 1
 
 [node name="Combatants" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=468157582]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 6
 
 [node name="Enemies" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Combatants" unique_id=1116527513]
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
 
 [node name="EnemyBackRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Combatants/Enemies" unique_id=1260780769]
 layout_mode = 2
+theme_override_constants/separation = 2
 
-[node name="EnemyButton2" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=1505026012 instance=ExtResource("4_5pv0p")]
+[node name="HexEnemyButton3" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=15237218 instance=ExtResource("4_5pv0p")]
 layout_mode = 2
+texture_normal = ExtResource("5_bjo3u")
 
-[node name="EnemyButton" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=74103270 instance=ExtResource("4_5pv0p")]
+[node name="HexEnemyButton4" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=714471548 instance=ExtResource("4_5pv0p")]
 layout_mode = 2
+texture_normal = ExtResource("5_bjo3u")
 
-[node name="EnemyButton3" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=570954670 instance=ExtResource("4_5pv0p")]
+[node name="HexEnemyButton5" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=370266852 instance=ExtResource("4_5pv0p")]
 layout_mode = 2
+texture_normal = ExtResource("5_bjo3u")
 
-[node name="EnemyButton4" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=1779662041 instance=ExtResource("4_5pv0p")]
+[node name="HexEnemyButton2" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=1505026012 instance=ExtResource("4_5pv0p")]
 layout_mode = 2
+texture_normal = ExtResource("6_ihngk")
 
 [node name="EnemyFrontRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Combatants/Enemies" unique_id=1241657870]
 layout_mode = 2
+theme_override_constants/separation = 2
 
-[node name="EnemyButton3" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=108305933 instance=ExtResource("4_5pv0p")]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=266979659]
+custom_minimum_size = Vector2(19, 0)
 layout_mode = 2
+localize_numeral_system = false
 
-[node name="EnemyButton" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=1811016870 instance=ExtResource("4_5pv0p")]
+[node name="HexEnemyButton6" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=391738465 instance=ExtResource("4_5pv0p")]
 layout_mode = 2
+texture_normal = ExtResource("5_bjo3u")
 
-[node name="EnemyButton2" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=1935742328 instance=ExtResource("4_5pv0p")]
+[node name="HexEnemyButton2" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=1627467683 instance=ExtResource("4_5pv0p")]
 layout_mode = 2
+texture_normal = ExtResource("6_ihngk")
 
-[node name="EnemyButton4" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=198605691 instance=ExtResource("4_5pv0p")]
+[node name="HexEnemyButton3" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=968263607 instance=ExtResource("4_5pv0p")]
 layout_mode = 2
+texture_normal = ExtResource("6_ihngk")
+
+[node name="HexEnemyButton5" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=45064045 instance=ExtResource("4_5pv0p")]
+layout_mode = 2
+texture_normal = ExtResource("5_bjo3u")
 
 [node name="Party" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Combatants" unique_id=648858808]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Combatants/Party" unique_id=1099181303]
+custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
 
 [node name="PartyBackRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Combatants/Party" unique_id=1002301072]
 layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 2
 
 [node name="PlayerButton1" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=57840672]
 layout_mode = 2
-texture_normal = ExtResource("5_ploow")
+texture_normal = ExtResource("7_ihngk")
 
 [node name="PlayerButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=185696385]
 layout_mode = 2
-texture_normal = ExtResource("5_ploow")
+texture_normal = ExtResource("8_yhs05")
 
 [node name="PlayerButton3" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=1656800282]
 layout_mode = 2
-texture_normal = ExtResource("5_ploow")
+texture_normal = ExtResource("7_ihngk")
 
 [node name="PartyFrontRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Combatants/Party" unique_id=1726073080]
 layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 2
 
 [node name="PlayerButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyFrontRow" unique_id=1617905419]
 layout_mode = 2
-texture_normal = ExtResource("6_0lqow")
+texture_normal = ExtResource("7_ihngk")
 
 [node name="PlayerButton3" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyFrontRow" unique_id=1633112103]
 layout_mode = 2
-texture_normal = ExtResource("6_0lqow")
+texture_normal = ExtResource("9_yrmgv")
 
 [node name="PlayerButton4" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyFrontRow" unique_id=704702429]
 layout_mode = 2
-texture_normal = ExtResource("6_0lqow")
+texture_normal = ExtResource("7_ihngk")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyFrontRow" unique_id=1617139756]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
 
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=917781454]
 layout_mode = 2
