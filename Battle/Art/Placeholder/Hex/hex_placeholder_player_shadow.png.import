@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc7xb67jqhnnv"
-path="res://.godot/imported/hex_placeholder_enemy.png-23b60ccb727542f5406e7d902672e7fa.ctex"
+uid="uid://b66jl8o8oob3t"
+path="res://.godot/imported/hex_placeholder_player_shadow.png-3c91acd615ae3f51291f6bad7ac0308f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/hex_placeholder_enemy.png"
-dest_files=["res://.godot/imported/hex_placeholder_enemy.png-23b60ccb727542f5406e7d902672e7fa.ctex"]
+source_file="res://Battle/Art/Placeholder/Hex/hex_placeholder_player_shadow.png"
+dest_files=["res://.godot/imported/hex_placeholder_player_shadow.png-3c91acd615ae3f51291f6bad7ac0308f.ctex"]
 
 [params]
 

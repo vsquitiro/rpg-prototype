@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfbifa1r6ajvg"
-path="res://.godot/imported/hex_placeholder_enemy_detailed.png-f5278605f778880cbcc5f0afe4d2ab90.ctex"
+uid="uid://cop623edsukco"
+path="res://.godot/imported/healer_placeholder_player_shadow.png-b018bc46a7cb64aa40deb8efe6174e7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/Art/Placeholder/hex_placeholder_enemy_detailed.png"
-dest_files=["res://.godot/imported/hex_placeholder_enemy_detailed.png-f5278605f778880cbcc5f0afe4d2ab90.ctex"]
+source_file="res://Battle/Art/Placeholder/Hex/healer_placeholder_player_shadow.png"
+dest_files=["res://.godot/imported/healer_placeholder_player_shadow.png-b018bc46a7cb64aa40deb8efe6174e7f.ctex"]
 
 [params]
 

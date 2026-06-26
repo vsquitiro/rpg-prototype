@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8yii82kq6w1d"
-path="res://.godot/imported/mage_placeholder_player_shadow.png-051eb3cb0d827e999495418f532276a4.ctex"
+path="res://.godot/imported/mage_placeholder_player_shadow.png-0d53473ac7766699a9a20f9ce247086d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/Art/Placeholder/mage_placeholder_player_shadow.png"
-dest_files=["res://.godot/imported/mage_placeholder_player_shadow.png-051eb3cb0d827e999495418f532276a4.ctex"]
+source_file="res://Battle/Art/Placeholder/Hex/mage_placeholder_player_shadow.png"
+dest_files=["res://.godot/imported/mage_placeholder_player_shadow.png-0d53473ac7766699a9a20f9ce247086d.ctex"]
 
 [params]
 

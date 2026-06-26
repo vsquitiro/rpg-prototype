@@ -4,11 +4,21 @@
 [ext_resource type="Theme" uid="uid://bmw5qp4hswumx" path="res://Battle/base_theme.tres" id="1_ksnli"]
 [ext_resource type="Texture2D" uid="uid://cp0x14jxjlqmq" path="res://GUI/Art/gui_frame.png" id="3_do635"]
 [ext_resource type="PackedScene" uid="uid://18m0rrc64sxu" path="res://Battle/EnemyButton.tscn" id="4_5pv0p"]
-[ext_resource type="Texture2D" uid="uid://cnlb0qmlid4nt" path="res://Battle/Art/Placeholder/hex_placeholder_enemy_shadow.png" id="5_bjo3u"]
-[ext_resource type="Texture2D" uid="uid://c6ju1qpmct862" path="res://Battle/Art/Placeholder/full_placeholder_enemy_shadow.png" id="6_ihngk"]
-[ext_resource type="Texture2D" uid="uid://b66jl8o8oob3t" path="res://Battle/Art/Placeholder/hex_placeholder_player_shadow.png" id="7_ihngk"]
-[ext_resource type="Texture2D" uid="uid://8yii82kq6w1d" path="res://Battle/Art/Placeholder/mage_placeholder_player_shadow.png" id="8_yhs05"]
-[ext_resource type="Texture2D" uid="uid://b2ygrmpy57ha3" path="res://Battle/Art/Placeholder/knight_placeholder_player_shadow.png" id="9_yrmgv"]
+[ext_resource type="Texture2D" uid="uid://cnlb0qmlid4nt" path="res://Battle/Art/Placeholder/Hex/hex_placeholder_enemy_shadow.png" id="5_bjo3u"]
+[ext_resource type="Texture2D" uid="uid://c6ju1qpmct862" path="res://Battle/Art/Placeholder/Hex/full_placeholder_enemy_shadow.png" id="6_ihngk"]
+[ext_resource type="Texture2D" uid="uid://b66jl8o8oob3t" path="res://Battle/Art/Placeholder/Hex/hex_placeholder_player_shadow.png" id="7_ihngk"]
+[ext_resource type="Texture2D" uid="uid://cop623edsukco" path="res://Battle/Art/Placeholder/Hex/healer_placeholder_player_shadow.png" id="8_lbu03"]
+[ext_resource type="Texture2D" uid="uid://8yii82kq6w1d" path="res://Battle/Art/Placeholder/Hex/mage_placeholder_player_shadow.png" id="8_yhs05"]
+[ext_resource type="Texture2D" uid="uid://b2ygrmpy57ha3" path="res://Battle/Art/Placeholder/Hex/knight_placeholder_player_shadow.png" id="9_yrmgv"]
+[ext_resource type="Texture2D" uid="uid://djtic04vlmgtk" path="res://Battle/Art/Placeholder/Hex/fighter_placeholder_player_shadow.png" id="10_4m2ey"]
+[ext_resource type="Texture2D" uid="uid://cy3d7yyof7us7" path="res://Battle/Art/Placeholder/Status/mage_profile_placeholder.png" id="10_yrmgv"]
+[ext_resource type="Texture2D" uid="uid://ca83sjhj2ct3a" path="res://Battle/Art/Placeholder/Status/knight_profile_placeholder.png" id="11_iurou"]
+[ext_resource type="Texture2D" uid="uid://b2htup3vks6e2" path="res://Battle/Art/Placeholder/Status/party_pos_placeholder_mage.png" id="11_lksgk"]
+[ext_resource type="Texture2D" uid="uid://p430p3mtfsv3" path="res://Battle/Art/Placeholder/Status/party_pos_placeholder_knight.png" id="12_g8yvd"]
+[ext_resource type="Texture2D" uid="uid://pij63kpj04yo" path="res://Battle/Art/Placeholder/Status/fighter_profile_placeholder.png" id="13_g8yvd"]
+[ext_resource type="Texture2D" uid="uid://dp3jy4r2rrbvd" path="res://Battle/Art/Placeholder/Status/party_pos_placeholder_fighter.png" id="14_mov3w"]
+[ext_resource type="Texture2D" uid="uid://c0ydwbasxrljt" path="res://Battle/Art/Placeholder/Status/healer_profile_placeholder.png" id="18_13ybq"]
+[ext_resource type="Texture2D" uid="uid://slb6nbxc3gsl" path="res://Battle/Art/Placeholder/Status/party_pos_placeholder_healer.png" id="19_4gpgw"]
 
 [node name="Battle" type="Control" unique_id=1049319393]
 layout_mode = 3
@@ -134,13 +144,13 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/separation = 2
 
-[node name="PlayerButton1" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=57840672]
-layout_mode = 2
-texture_normal = ExtResource("7_ihngk")
-
 [node name="PlayerButton2" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=185696385]
 layout_mode = 2
 texture_normal = ExtResource("8_yhs05")
+
+[node name="PlayerButton1" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=57840672]
+layout_mode = 2
+texture_normal = ExtResource("8_lbu03")
 
 [node name="PlayerButton3" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=1656800282]
 layout_mode = 2
@@ -161,7 +171,7 @@ texture_normal = ExtResource("9_yrmgv")
 
 [node name="PlayerButton4" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyFrontRow" unique_id=704702429]
 layout_mode = 2
-texture_normal = ExtResource("7_ihngk")
+texture_normal = ExtResource("10_4m2ey")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyFrontRow" unique_id=1617139756]
 custom_minimum_size = Vector2(15, 0)
@@ -170,7 +180,7 @@ layout_mode = 2
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=917781454]
 layout_mode = 2
 
-[node name="Actions" type="NinePatchRect" parent="MarginContainer/VBoxContainer/Bottom" unique_id=1567561017]
+[node name="Commands" type="NinePatchRect" parent="MarginContainer/VBoxContainer/Bottom" unique_id=1567561017]
 custom_minimum_size = Vector2(120, 56)
 layout_mode = 2
 texture = ExtResource("3_do635")
@@ -180,7 +190,7 @@ patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Bottom/Actions" unique_id=184915853]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Bottom/Commands" unique_id=184915853]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -188,45 +198,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer" unique_id=273858257]
+[node name="CommandColumns" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer" unique_id=273858257]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer" unique_id=2014271974]
+[node name="CommandColumn1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns" unique_id=2014271974]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1565336346]
+[node name="AttackButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns/CommandColumn1" unique_id=1565336346]
 layout_mode = 2
 text = "Attack"
 flat = true
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer/VBoxContainer" unique_id=459202937]
+[node name="SpellButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns/CommandColumn1" unique_id=459202937]
 layout_mode = 2
 text = "Spell"
 flat = true
 
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1291011357]
+[node name="GuardButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns/CommandColumn1" unique_id=1291011357]
 layout_mode = 2
 text = "Guard"
 flat = true
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer" unique_id=1821324191]
+[node name="CommandColumn2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns" unique_id=1821324191]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1800818597]
+[node name="ItemButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns/CommandColumn2" unique_id=1800818597]
 layout_mode = 2
 text = "Item
 "
 flat = true
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=278211032]
+[node name="SwapButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns/CommandColumn2" unique_id=278211032]
 layout_mode = 2
 text = "Swap
 "
 flat = true
 
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Actions/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=327231393]
+[node name="EscapeButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandColumns/CommandColumn2" unique_id=327231393]
 layout_mode = 2
 text = "Escape
 "
@@ -241,3 +251,137 @@ patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats" unique_id=877758300]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="PartyColumns" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer" unique_id=1991037815]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="PartyStats1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns" unique_id=818747006]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="PortraitAndPos" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats1" unique_id=958858758]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats1/PortraitAndPos" unique_id=1452062282]
+layout_mode = 2
+texture = ExtResource("11_iurou")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats1/PortraitAndPos" unique_id=1510767641]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("12_g8yvd")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats1" unique_id=1075628009]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "PLYR1"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats1" unique_id=1569109026]
+layout_mode = 2
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 8
+text = "9999/
+ 9999"
+
+[node name="PartyStats2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns" unique_id=1271880018]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="PortraitAndPos" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats2" unique_id=47077721]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats2/PortraitAndPos" unique_id=965918973]
+layout_mode = 2
+texture = ExtResource("13_g8yvd")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats2/PortraitAndPos" unique_id=1130500018]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("14_mov3w")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats2" unique_id=1999588943]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "PLYR2"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats2" unique_id=194618359]
+layout_mode = 2
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 8
+text = "9999/
+ 9999"
+
+[node name="PartyStats3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns" unique_id=740303673]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="PortraitAndPos" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats3" unique_id=1565811318]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats3/PortraitAndPos" unique_id=641875279]
+layout_mode = 2
+texture = ExtResource("10_yrmgv")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats3/PortraitAndPos" unique_id=1219977987]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("11_lksgk")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats3" unique_id=108982347]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "PLYR3"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats3" unique_id=465102850]
+layout_mode = 2
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 8
+text = "9999/
+ 9999"
+
+[node name="PartyStats4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns" unique_id=177810655]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="PortraitAndPos" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats4" unique_id=897101590]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats4/PortraitAndPos" unique_id=141449560]
+layout_mode = 2
+texture = ExtResource("18_13ybq")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats4/PortraitAndPos" unique_id=2021666672]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("19_4gpgw")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats4" unique_id=820165237]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "PLYR4"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns/PartyStats4" unique_id=701066954]
+layout_mode = 2
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 8
+text = "9999/
+ 9999"
