@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://18m0rrc64sxu"]
 
-[ext_resource type="Texture2D" uid="uid://dl0s4grwb1pnn" path="res://Battle/Art/Enemies/monster_bat.png" id="1_5h1th"]
+[ext_resource type="Texture2D" uid="uid://c6ju1qpmct862" path="res://Battle/Art/Placeholder/Hex/full_placeholder_enemy_shadow.png" id="1_5h1th"]
 [ext_resource type="Script" uid="uid://o2us7nk0j0x3" path="res://Battle/enemy_button.gd" id="2_igefw"]
 
 [node name="EnemyButton" type="TextureButton" unique_id=1505026012]

@@ -2,11 +2,15 @@
 
 [ext_resource type="FontFile" uid="uid://dd2k0ujtcfsob" path="res://Fonts/press-start-2p-font/PressStart2P-vaV7.ttf" id="1_umptp"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_umptp"]
+
 [resource]
 default_font = ExtResource("1_umptp")
 default_font_size = 6
+Button/colors/font_focus_color = Color(0.70980394, 0.6745098, 0.16078432, 1)
 Button/constants/h_separation = 4
 Button/font_sizes/font_size = 8
+Button/styles/focus = SubResource("StyleBoxEmpty_umptp")
 MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 4
 MarginContainer/constants/margin_right = 4
