@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b2htup3vks6e2" path="res://Battle/Art/Placeholder/Status/party_pos_placeholder_mage.png" id="16_axnfx"]
 [ext_resource type="Texture2D" uid="uid://c0ydwbasxrljt" path="res://Battle/Art/Placeholder/Status/healer_profile_placeholder.png" id="17_arghu"]
 [ext_resource type="Texture2D" uid="uid://slb6nbxc3gsl" path="res://Battle/Art/Placeholder/Status/party_pos_placeholder_healer.png" id="18_opo03"]
+[ext_resource type="PackedScene" uid="uid://o18g8x7bs1dm" path="res://GUI/menu_cursor.tscn" id="20_6d22a"]
 
 [node name="Battle" type="Control" unique_id=1049319393]
 layout_mode = 3
@@ -176,9 +177,11 @@ layout_mode = 2
 
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=917781454]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 2
 
 [node name="Commands" type="NinePatchRect" parent="MarginContainer/VBoxContainer/Bottom" unique_id=1567561017]
-custom_minimum_size = Vector2(120, 56)
+custom_minimum_size = Vector2(110, 56)
 layout_mode = 2
 texture = ExtResource("3_6d22a")
 region_rect = Rect2(0, 0, 16, 16)
@@ -197,37 +200,68 @@ grow_vertical = 2
 
 [node name="CommandMenu" type="GridContainer" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer" unique_id=715734847]
 layout_mode = 2
+theme_override_constants/h_separation = -4
 theme_override_constants/v_separation = 1
 columns = 2
 script = ExtResource("11_706sf")
 
 [node name="AttackButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" unique_id=1565336346]
 layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../EscapeButton")
+focus_neighbor_top = NodePath("../EscapeButton")
+focus_neighbor_right = NodePath("../SpellButton")
+focus_neighbor_bottom = NodePath("../GuardButton")
 text = "Attack"
 flat = true
 
 [node name="SpellButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" unique_id=459202937]
 layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../AttackButton")
+focus_neighbor_top = NodePath("../SwapButton")
+focus_neighbor_right = NodePath("../GuardButton")
+focus_neighbor_bottom = NodePath("../ItemButton")
 text = "Spell"
 flat = true
 
 [node name="GuardButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" unique_id=1291011357]
 layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../SpellButton")
+focus_neighbor_top = NodePath("../AttackButton")
+focus_neighbor_right = NodePath("../ItemButton")
+focus_neighbor_bottom = NodePath("../SwapButton")
 text = "Guard"
 flat = true
 
 [node name="ItemButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" unique_id=1800818597]
 layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../GuardButton")
+focus_neighbor_top = NodePath("../SpellButton")
+focus_neighbor_right = NodePath("../SwapButton")
+focus_neighbor_bottom = NodePath("../EscapeButton")
 text = "Item"
 flat = true
 
 [node name="SwapButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" unique_id=278211032]
 layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../ItemButton")
+focus_neighbor_top = NodePath("../GuardButton")
+focus_neighbor_right = NodePath("../EscapeButton")
+focus_neighbor_bottom = NodePath("../SpellButton")
 text = "Swap"
 flat = true
 
 [node name="EscapeButton" type="Button" parent="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" unique_id=327231393]
 layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../SwapButton")
+focus_neighbor_top = NodePath("../ItemButton")
+focus_neighbor_right = NodePath("../AttackButton")
+focus_neighbor_bottom = NodePath("../AttackButton")
 text = "Escape"
 flat = true
 
@@ -374,6 +408,15 @@ theme_override_constants/line_spacing = 1
 theme_override_font_sizes/font_size = 8
 text = "9999/
  9999"
+
+[node name="MenuCursor" parent="." unique_id=1156811881 instance=ExtResource("20_6d22a")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="button_focused" from="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" to="." method="_on_command_menu_button_focused"]
 [connection signal="button_pressed" from="MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu" to="." method="_on_command_menu_button_pressed"]
