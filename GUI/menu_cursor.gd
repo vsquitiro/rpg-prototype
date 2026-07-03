@@ -1,7 +1,8 @@
 extends TextureRect
 
 var target: Node = null
-const OFFSET: Vector2 = Vector2(-14,-8)
+# Change offset based on wether it's text or combatantant buttons
+const OFFSET: Vector2 = Vector2(-13,-8)
 
 func _ready() -> void:
 	get_viewport().gui_focus_changed.connect(_on_viewport_gui_focus_changed)

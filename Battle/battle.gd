@@ -2,7 +2,7 @@ class_name Battle extends Control
 
 # TODO For now following tutorial but will only get the left three buttons
 @onready var _commands_menu: Menu = $MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu
-@onready var _enemies_front_row: HBoxContainer = $MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow
+@onready var _enemies_front_row: Control = $MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow
 #@onready var _enemies_back_row: Menu = $MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow
 
 func _ready() -> void:
@@ -18,4 +18,4 @@ func _on_command_menu_button_pressed(button: BaseButton) -> void:
 	match button.text:
 		"Attack":
 			print('Ah yeah we fighting')
-			_enemies_front_row.button_focus()
+			#_enemies_front_row.button_focus()

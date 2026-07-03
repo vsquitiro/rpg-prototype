@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://o18g8x7bs1dm"]
 
-[ext_resource type="Texture2D" uid="uid://cxabiklb22l4c" path="res://GUI/Art/cursor_prototype.png" id="1_yx7ii"]
+[ext_resource type="Texture2D" uid="uid://crdns10e208an" path="res://GUI/Art/cursor.png" id="1_ilbi8"]
 [ext_resource type="Script" uid="uid://bsefeng0kj2p7" path="res://GUI/menu_cursor.gd" id="2_5cc5m"]
 
 [node name="MenuCursor" type="TextureRect" unique_id=1156811881]
@@ -10,6 +10,6 @@ anchor_bottom = 0.089
 offset_bottom = -0.020000458
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_yx7ii")
+texture = ExtResource("1_ilbi8")
 stretch_mode = 2
 script = ExtResource("2_5cc5m")
