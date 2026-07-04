@@ -1,7 +1,7 @@
 extends TextureRect
 
 var target: Node = null
-# Change offset based on wether it's text or combatantant buttons
+# TODO Change offset based on wether it's text or combatantant buttons
 const OFFSET: Vector2 = Vector2(-13,-8)
 
 func _ready() -> void:

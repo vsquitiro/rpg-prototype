@@ -1,4 +1,4 @@
-class_name Menu extends Container
+class_name Menu extends Control
 
 signal button_focused(button: BaseButton)
 signal button_pressed(button: BaseButton)
@@ -13,12 +13,18 @@ func _ready() -> void:
 func get_buttons() -> Array:
 	return get_children()	
 
+func button_enable_focus(on: bool) -> void:
+	var mode: FocusMode = FocusMode.FOCUS_ALL if on else FocusMode.FOCUS_NONE
+	for button: BaseButton in get_buttons():
+		button.set_focus_mode(mode)
+
 func button_focus(n: int = index) -> void:
+	button_enable_focus(true)
 	var button: BaseButton = get_buttons()[n]
 	button.grab_focus()
 
 func _on_button_focused(button: BaseButton) -> void:
-	#index = button.get_button_index()
+	index = button.get_index()
 	emit_signal("button_focused", button)
 		
 func _on_button_pressed(button: BaseButton) -> void:

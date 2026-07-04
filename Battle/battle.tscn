@@ -91,6 +91,7 @@ size_flags_vertical = 4
 anchors_preset = 0
 offset_right = 187.0
 offset_bottom = 40.0
+script = ExtResource("11_706sf")
 
 [node name="EnemyBackRow1" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyBackRow" unique_id=15237218 instance=ExtResource("4_y2316")]
 layout_mode = 0
@@ -128,6 +129,7 @@ anchors_preset = 0
 offset_top = 40.0
 offset_right = 187.0
 offset_bottom = 80.0
+script = ExtResource("11_706sf")
 
 [node name="EnemyFrontRow1" parent="MarginContainer/VBoxContainer/Combatants/Enemies/EnemyFrontRow" unique_id=1627467683 instance=ExtResource("4_y2316")]
 layout_mode = 0
@@ -169,6 +171,7 @@ size_flags_vertical = 4
 [node name="PartyBackRow" type="Control" parent="MarginContainer/VBoxContainer/Combatants/Party" unique_id=1029310935]
 anchors_preset = 0
 size_flags_horizontal = 8
+script = ExtResource("11_706sf")
 
 [node name="BackRowButton1" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyBackRow" unique_id=185696385]
 layout_mode = 0
@@ -197,6 +200,7 @@ texture_normal = ExtResource("9_qfnk1")
 [node name="PartyFrontRow" type="Control" parent="MarginContainer/VBoxContainer/Combatants/Party" unique_id=15551828]
 anchors_preset = 0
 size_flags_horizontal = 8
+script = ExtResource("11_706sf")
 
 [node name="FrontRowButton1" type="TextureButton" parent="MarginContainer/VBoxContainer/Combatants/Party/PartyFrontRow" unique_id=1617905419]
 layout_mode = 0
