@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://rc3adbhlneif"]
+
+[ext_resource type="Script" uid="uid://d1h2ef7laby4f" path="res://Battle/party_columns.gd" id="1_lsa18"]
+[ext_resource type="PackedScene" uid="uid://dyoqol4psfvey" path="res://Battle/player_stats.tscn" id="2_k3kin"]
+
+[node name="PartyColumns" type="HBoxContainer" unique_id=1124329904]
+theme_override_constants/separation = 6
+script = ExtResource("1_lsa18")
+
+[node name="Player1Stats" parent="." unique_id=1939434656 instance=ExtResource("2_k3kin")]
+layout_mode = 2
+
+[node name="Player2Stats" parent="." unique_id=809797492 instance=ExtResource("2_k3kin")]
+layout_mode = 2
+
+[node name="Player3Stats" parent="." unique_id=248732010 instance=ExtResource("2_k3kin")]
+layout_mode = 2
+
+[node name="Player4Stats" parent="." unique_id=1678208161 instance=ExtResource("2_k3kin")]
+layout_mode = 2

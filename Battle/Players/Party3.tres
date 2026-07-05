@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BattleActor" format=3 uid="uid://dcwdd18vrs2vj"]
+
+[ext_resource type="Script" uid="uid://b8k57b6lj3ha2" path="res://Battle/battle_actor.gd" id="1_m0isc"]
+
+[resource]
+script = ExtResource("1_m0isc")
+row = 1
+name = "Mage"
+hp_max = 22
+tp_max = 0
+player_class = 2
+metadata/_custom_type_script = "uid://b8k57b6lj3ha2"

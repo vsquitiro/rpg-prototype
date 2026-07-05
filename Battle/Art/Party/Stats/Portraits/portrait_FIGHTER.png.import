@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ax7ptrbfbgu"
-path="res://.godot/imported/party_pos_b1.png-d115ccd41efcace4f239a6d69c837b51.ctex"
+uid="uid://w1dq0npite4d"
+path="res://.godot/imported/portrait_FIGHTER.png-4ba0f28d99ea451daefb836d51ac53b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/Art/Placeholder/Status/party_pos_b1.png"
-dest_files=["res://.godot/imported/party_pos_b1.png-d115ccd41efcace4f239a6d69c837b51.ctex"]
+source_file="res://Battle/Art/Party/Stats/Portraits/portrait_FIGHTER.png"
+dest_files=["res://.godot/imported/portrait_FIGHTER.png-4ba0f28d99ea451daefb836d51ac53b5.ctex"]
 
 [params]
 

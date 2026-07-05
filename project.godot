@@ -15,10 +15,15 @@ run/main_scene="uid://cn800l1leinwm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Data="*uid://benqoh3e8mehq"
+
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/borderless=true
 window/size/window_width_override=2560
 window/size/window_height_override=1440
 window/stretch/mode="viewport"
@@ -37,3 +42,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true
+textures/size/borderless=true

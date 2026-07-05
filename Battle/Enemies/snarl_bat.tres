@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BattleActor" format=3 uid="uid://ccimhtjkuv8t2"]
+
+[ext_resource type="Script" uid="uid://b8k57b6lj3ha2" path="res://Battle/battle_actor.gd" id="1_3xhqq"]
+
+[resource]
+script = ExtResource("1_3xhqq")
+pos = 2
+name = "SnarlBat"
+hp_max = 5
+metadata/_custom_type_script = "uid://b8k57b6lj3ha2"

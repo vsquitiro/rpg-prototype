@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sp13hiakfx2i"
-path="res://.godot/imported/party_pos_f3.png-117b47a6dd42b5a644809e1577daa25f.ctex"
+uid="uid://be706cdj7q0av"
+path="res://.godot/imported/portrait_MAGE.png-be47921ca3b7030de58c45a634e2f6c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/Art/Placeholder/Status/party_pos_f3.png"
-dest_files=["res://.godot/imported/party_pos_f3.png-117b47a6dd42b5a644809e1577daa25f.ctex"]
+source_file="res://Battle/Art/Party/Stats/Portraits/portrait_MAGE.png"
+dest_files=["res://.godot/imported/portrait_MAGE.png-be47921ca3b7030de58c45a634e2f6c0.ctex"]
 
 [params]
 
