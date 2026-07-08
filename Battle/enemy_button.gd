@@ -1,7 +1,8 @@
 class_name EnemyButton extends TextureButton
 
-@export var data: BattleActor = null :
+@export var data: BattleActorEnemy = null :
 	set(value):
+		print('we are setting the value:', value)
 		data = value.new()
 		# TODO update sprite
 	

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://fb6m0u08pfmv"]
+
+[ext_resource type="Texture2D" uid="uid://3h67m33r04bh" path="res://Battle/Art/Layout/hex_party.png" id="1_gtllu"]
+
+[node name="BackRowButton1" type="TextureButton" unique_id=1600203829]
+offset_right = 32.0
+offset_bottom = 16.0
+texture_normal = ExtResource("1_gtllu")

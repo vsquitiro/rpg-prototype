@@ -1,12 +1,11 @@
-[gd_resource type="Resource" script_class="BattleActor" format=3 uid="uid://cfkjbpljdc0in"]
+[gd_resource type="Resource" script_class="BattleActorPlayer" format=3 uid="uid://do0513krnlllk"]
 
-[ext_resource type="Script" uid="uid://b8k57b6lj3ha2" path="res://Battle/battle_actor.gd" id="1_xjpva"]
+[ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_xjpva"]
 
 [resource]
 script = ExtResource("1_xjpva")
-pos = 3
+player_class = 1
+pos = 2
 name = "DD"
 hp_max = 32
-tp_max = 0
-player_class = 1
-metadata/_custom_type_script = "uid://b8k57b6lj3ha2"
+metadata/_custom_type_script = "uid://dwguej3t5aece"

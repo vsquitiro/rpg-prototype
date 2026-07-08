@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2v07jpndk2rj"
-path="res://.godot/imported/position_FRONT_2.png-c79b36c8511aaadf5dbd1a9d862cba3b.ctex"
+uid="uid://c8ax7ptrbfbgu"
+path="res://.godot/imported/p_3.png-643666bb5b8b3b81cb134288398c16ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/Art/Party/Stats/Positions/position_FRONT_2.png"
-dest_files=["res://.godot/imported/position_FRONT_2.png-c79b36c8511aaadf5dbd1a9d862cba3b.ctex"]
+source_file="res://Battle/Art/Party/Stats/Positions/p_3.png"
+dest_files=["res://.godot/imported/p_3.png-643666bb5b8b3b81cb134288398c16ea.ctex"]
 
 [params]
 

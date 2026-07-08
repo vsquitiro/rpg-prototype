@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://csnv22ig4b8m7"]
+
+[ext_resource type="Texture2D" uid="uid://dsuog5ns40wdh" path="res://Battle/Art/Party/Combat/knight_standby.png" id="1_ovprn"]
+
+[node name="PartyButton1" type="TextureButton" unique_id=971554758]
+offset_right = 24.0
+offset_bottom = 24.0
+texture_normal = ExtResource("1_ovprn")

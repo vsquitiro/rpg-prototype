@@ -6,7 +6,7 @@ class_name PlayerStats extends VBoxContainer
 @onready var hp: Label = $Health/HP
 @onready var hp_max: Label = $Health/HPMax
 
-var data: BattleActor = null:
+var data: BattleActorPlayer = null:
 	set(value):
 		data = value
 		
@@ -16,8 +16,8 @@ var data: BattleActor = null:
 			hp.text = str(data.hp) + '/'
 			hp_max.text = str(data.hp_max)
 			# TODO reassess this method after learning more about GODOT
-			portrait.texture=ResourceLoader.load("res://Battle/Art/Party/Stats/Portraits/portrait_%s.png" % BattleActor.PlayerClass.keys()[data.player_class])
-			player_position.texture=ResourceLoader.load("res://Battle/Art/Party/Stats/Positions/position_%s_%s.png" % [BattleActor.Row.keys()[data.row], data.pos])
+			portrait.texture=ResourceLoader.load("res://Battle/Art/Party/Stats/Portraits/portrait_%s.png" % BattleActorPlayer.PlayerClass.keys()[data.player_class])
+			player_position.texture=ResourceLoader.load("res://Battle/Art/Party/Stats/Positions/p_%s.png" % data.pos)
 			show()
 		else:
 			hide()

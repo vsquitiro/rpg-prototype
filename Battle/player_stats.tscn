@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dt1jwanoogabg" path="res://Battle/player_stats.gd" id="1_log7q"]
 [ext_resource type="Texture2D" uid="uid://b5gg1ecfm2484" path="res://Battle/Art/Party/Stats/Portraits/portrait_KNIGHT.png" id="2_y0xxe"]
-[ext_resource type="Texture2D" uid="uid://b81yasf1x1ei" path="res://Battle/Art/Party/Stats/Positions/position_FRONT_1.png" id="3_log7q"]
+[ext_resource type="Texture2D" uid="uid://b81yasf1x1ei" path="res://Battle/Art/Party/Stats/Positions/p_0.png" id="3_log7q"]
 
 [node name="PlayerStats" type="VBoxContainer" unique_id=1939434656]
 custom_minimum_size = Vector2(40, 0)

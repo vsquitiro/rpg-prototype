@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="BattleActor" format=3 uid="uid://ccimhtjkuv8t2"]
+[gd_resource type="Resource" script_class="BattleActorEnemy" format=3 uid="uid://bdq6431q2ieyj"]
 
-[ext_resource type="Script" uid="uid://b8k57b6lj3ha2" path="res://Battle/battle_actor.gd" id="1_3xhqq"]
+[ext_resource type="Script" uid="uid://c8iijfboe6km" path="res://Battle/battle_actor_enemy.gd" id="1_3xhqq"]
 
 [resource]
 script = ExtResource("1_3xhqq")
+row = 1
 pos = 2
 name = "SnarlBat"
-hp_max = 5
-metadata/_custom_type_script = "uid://b8k57b6lj3ha2"
+hp_max = 8
+metadata/_custom_type_script = "uid://c8iijfboe6km"

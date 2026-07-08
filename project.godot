@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="rpgPrototype"
-run/main_scene="uid://cn800l1leinwm"
+run/main_scene="uid://b47epcrorbnkf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
