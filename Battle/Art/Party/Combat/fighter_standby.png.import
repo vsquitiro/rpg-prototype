@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceujnddm6ohx7"
-path="res://.godot/imported/fighter_standby.png-0c12fcf7ee95fdc8ce45cc05021d67f7.ctex"
+path="res://.godot/imported/FIGHTER_standby.png-c43c0a9b03ff225d3c08bece44ef6568.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Battle/Art/Party/Combat/fighter_standby.png"
-dest_files=["res://.godot/imported/fighter_standby.png-0c12fcf7ee95fdc8ce45cc05021d67f7.ctex"]
+source_file="res://Battle/Art/Party/Combat/FIGHTER_standby.png"
+dest_files=["res://.godot/imported/FIGHTER_standby.png-c43c0a9b03ff225d3c08bece44ef6568.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BattleActorPlayer" format=3 uid="uid://co56gabmitgq2"]
 
-[ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_uvnih"]
+[ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_0uklv"]
 
 [resource]
-script = ExtResource("1_uvnih")
+script = ExtResource("1_0uklv")
 name = "Tank"
 hp_max = 45
 metadata/_custom_type_script = "uid://dwguej3t5aece"

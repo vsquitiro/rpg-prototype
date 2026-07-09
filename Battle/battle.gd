@@ -63,8 +63,6 @@ func _on_command_menu_button_pressed(button: BaseButton) -> void:
 func _on_enemy_buttons_button_pressed(button: BaseButton) -> void:
 	var actor: BattleActorPlayer = Data.party[current_player_index]
 	var target: BattleActorEnemy = button.data
-	print(button)
-	print(target)
 	print(target.name, ": HP=", target.hp, "/", target.hp_max)
 	event_queue.add(command, actor, target)
 

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dt13ga03volph"]
+
+[ext_resource type="Script" uid="uid://7b7rgbddsbsk" path="res://Battle/party_buttons.gd" id="1_3pbvd"]
+[ext_resource type="PackedScene" uid="uid://csnv22ig4b8m7" path="res://Battle/player_button.tscn" id="2_4j0nu"]
+
+[node name="PartyButtons" type="Control" unique_id=1210170222]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 8
+script = ExtResource("1_3pbvd")
+
+[node name="PlayerButton1" parent="." unique_id=971554758 instance=ExtResource("2_4j0nu")]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="PlayerButton2" parent="." unique_id=1312657919 instance=ExtResource("2_4j0nu")]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="PlayerButton3" parent="." unique_id=540150707 instance=ExtResource("2_4j0nu")]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="PlayerButton4" parent="." unique_id=1974374399 instance=ExtResource("2_4j0nu")]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0

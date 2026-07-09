@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://xwp26gj1un33" path="res://Battle/enemy_hex.tscn" id="7_dh7om"]
 [ext_resource type="Resource" uid="uid://bdq6431q2ieyj" path="res://Battle/Enemies/snarl_bat.tres" id="8_lksgk"]
 [ext_resource type="PackedScene" uid="uid://fb6m0u08pfmv" path="res://Battle/party_hex.tscn" id="9_tsc8h"]
-[ext_resource type="PackedScene" uid="uid://csnv22ig4b8m7" path="res://Battle/party_button.tscn" id="10_3ym65"]
+[ext_resource type="PackedScene" uid="uid://dt13ga03volph" path="res://Battle/party_buttons.tscn" id="10_lksgk"]
 [ext_resource type="Script" uid="uid://nnos5lmoxf38" path="res://GUI/menu.gd" id="11_706sf"]
 [ext_resource type="PackedScene" uid="uid://rc3adbhlneif" path="res://Battle/party_columns.tscn" id="14_tsc8h"]
 [ext_resource type="PackedScene" uid="uid://o18g8x7bs1dm" path="res://GUI/menu_cursor.tscn" id="20_6d22a"]
@@ -213,30 +213,8 @@ offset_top = 21.0
 offset_right = 93.0
 offset_bottom = 37.0
 
-[node name="PartyButtons" type="Control" parent="MarginContainer/VBoxContainer/Combatants/PartyArea" unique_id=15551828]
-anchors_preset = 0
-size_flags_horizontal = 8
-script = ExtResource("11_706sf")
-
-[node name="PartyButton1" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyButtons" unique_id=971554758 instance=ExtResource("10_3ym65")]
+[node name="PartyButtons" parent="MarginContainer/VBoxContainer/Combatants/PartyArea" unique_id=1210170222 instance=ExtResource("10_lksgk")]
 layout_mode = 0
-offset_right = 32.0
-offset_bottom = 32.0
-
-[node name="PartyButton2" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyButtons" unique_id=1692542483 instance=ExtResource("10_3ym65")]
-layout_mode = 0
-offset_right = 32.0
-offset_bottom = 32.0
-
-[node name="PartyButton3" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyButtons" unique_id=1444766541 instance=ExtResource("10_3ym65")]
-layout_mode = 0
-offset_right = 32.0
-offset_bottom = 32.0
-
-[node name="PartyButton4" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyButtons" unique_id=988963196 instance=ExtResource("10_3ym65")]
-layout_mode = 0
-offset_right = 32.0
-offset_bottom = 32.0
 
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=917781454]
 layout_mode = 2
