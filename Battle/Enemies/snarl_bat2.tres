@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BattleActorEnemy" format=3 uid="uid://cb84k3h33pium"]
+
+[ext_resource type="Script" uid="uid://c8iijfboe6km" path="res://Battle/battle_actor_enemy.gd" id="1_snu7b"]
+
+[resource]
+script = ExtResource("1_snu7b")
+row = 1
+pos = 2
+name = "SnarlBat"
+hp_max = 8
+metadata/_custom_type_script = "uid://c8iijfboe6km"

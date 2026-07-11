@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_3xhqq")
 row = 1
-pos = 2
 name = "SnarlBat"
 hp_max = 8
 metadata/_custom_type_script = "uid://c8iijfboe6km"

@@ -15,7 +15,6 @@ var menu_target: MenuTargets = MenuTargets.OPTIONS
 @onready var _commands_menu: Menu = $MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu
 @onready var _enemy_buttons: Menu = $MarginContainer/VBoxContainer/Combatants/EnemyArea/EnemyButtons
 @onready var _party_buttons: Menu = $MarginContainer/VBoxContainer/Combatants/PartyArea/PartyButtons
-@onready var party_stats: PartyColumns = $MarginContainer/VBoxContainer/Bottom/PartyStats/MarginContainer/PartyColumns
 
 
 var _button_groups = []
@@ -29,8 +28,12 @@ func goto_next_player(dir: int = 1) -> void:
 	current_player_index += dir
 	
 	if current_player_index > Data.size():
-		# TODO roll for enemy actions
-		# TODO sort by speeds rolls
+		# TODO eventually genericize this, but for prototype use two snarl_bat enemies
+		for enemy: EnemyButton in _enemy_buttons.get_buttons():
+			# TODO set up actual targeting
+			var target: BattleActor = party.pick_random() 
+			# TODO hard coding ATTACK for now
+			event_queue.add(EventQueue.Commands.ATTACK, enemy.data, target)
 		pass
 	else:
 		# Activate next player
@@ -61,10 +64,14 @@ func _on_command_menu_button_pressed(button: BaseButton) -> void:
 			_enemy_buttons.button_focus()
 
 func _on_enemy_buttons_button_pressed(button: BaseButton) -> void:
-	var actor: BattleActorPlayer = Data.party[current_player_index]
-	var target: BattleActorEnemy = button.data
+	_target_battle_actor(button.data)
+
+func _on_party_buttons_button_pressed(button: BaseButton) -> void:
+	_target_battle_actor(button.data)
+
+func _target_battle_actor(target: BattleActor) -> void:
 	print(target.name, ": HP=", target.hp, "/", target.hp_max)
-	event_queue.add(command, actor, target)
+	event_queue.add(command, Data.party[current_player_index], target)
 
 func _handle_focus_swap(to_enable: Array):
 	for buttons in _button_groups:
