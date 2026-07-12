@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://cb84k3h33pium" path="res://Battle/Enemies/snarl_bat2.tres" id="9_4m2ey"]
 [ext_resource type="PackedScene" uid="uid://fb6m0u08pfmv" path="res://Battle/party_hex.tscn" id="9_tsc8h"]
 [ext_resource type="PackedScene" uid="uid://csnv22ig4b8m7" path="res://Battle/player_button.tscn" id="10_3ym65"]
+[ext_resource type="Script" uid="uid://3pcstyf257qr" path="res://Battle/party_hexes.gd" id="10_iurou"]
 [ext_resource type="Script" uid="uid://7b7rgbddsbsk" path="res://Battle/party_buttons.gd" id="10_rcrfk"]
 [ext_resource type="Script" uid="uid://nnos5lmoxf38" path="res://GUI/menu.gd" id="11_706sf"]
 [ext_resource type="PackedScene" uid="uid://rc3adbhlneif" path="res://Battle/party_columns.tscn" id="14_tsc8h"]
@@ -179,28 +180,7 @@ size_flags_vertical = 4
 [node name="PartyHexes" type="Control" parent="MarginContainer/VBoxContainer/Combatants/PartyArea" unique_id=1029310935]
 anchors_preset = 0
 size_flags_horizontal = 8
-script = ExtResource("11_706sf")
-
-[node name="BackRow1" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes" unique_id=1600203829 instance=ExtResource("9_tsc8h")]
-layout_mode = 0
-offset_left = 20.0
-offset_top = -11.0
-offset_right = 52.0
-offset_bottom = 5.0
-
-[node name="BackRow2" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes" unique_id=1428944639 instance=ExtResource("9_tsc8h")]
-layout_mode = 0
-offset_left = 52.0
-offset_top = -9.0
-offset_right = 84.0
-offset_bottom = 7.0
-
-[node name="BackRow3" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes" unique_id=1091696373 instance=ExtResource("9_tsc8h")]
-layout_mode = 0
-offset_left = 84.0
-offset_top = -7.0
-offset_right = 116.0
-offset_bottom = 9.0
+script = ExtResource("10_iurou")
 
 [node name="FrontRow1" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes" unique_id=995381903 instance=ExtResource("9_tsc8h")]
 layout_mode = 0
@@ -222,6 +202,27 @@ offset_left = 61.0
 offset_top = 21.0
 offset_right = 93.0
 offset_bottom = 37.0
+
+[node name="BackRow1" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes" unique_id=1600203829 instance=ExtResource("9_tsc8h")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -11.0
+offset_right = 52.0
+offset_bottom = 5.0
+
+[node name="BackRow2" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes" unique_id=1428944639 instance=ExtResource("9_tsc8h")]
+layout_mode = 0
+offset_left = 52.0
+offset_top = -9.0
+offset_right = 84.0
+offset_bottom = 7.0
+
+[node name="BackRow3" parent="MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes" unique_id=1091696373 instance=ExtResource("9_tsc8h")]
+layout_mode = 0
+offset_left = 84.0
+offset_top = -7.0
+offset_right = 116.0
+offset_bottom = 9.0
 
 [node name="PartyButtons" type="Control" parent="MarginContainer/VBoxContainer/Combatants/PartyArea" unique_id=1210170222]
 anchors_preset = 0
