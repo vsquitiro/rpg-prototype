@@ -3,44 +3,79 @@
 [ext_resource type="Script" uid="uid://dt1jwanoogabg" path="res://Battle/player_stats.gd" id="1_log7q"]
 [ext_resource type="Texture2D" uid="uid://b5gg1ecfm2484" path="res://Battle/Art/Party/Stats/Portraits/portrait_KNIGHT.png" id="2_y0xxe"]
 [ext_resource type="Texture2D" uid="uid://b81yasf1x1ei" path="res://Battle/Art/Party/Stats/Positions/p_0.png" id="3_log7q"]
+[ext_resource type="Texture2D" uid="uid://cf4ukgs1uqyjx" path="res://GUI/Art/gui_frame_filled.png" id="4_35gu0"]
+[ext_resource type="Texture2D" uid="uid://4kukhkptgtlb" path="res://GUI/Art/active_indicator.png" id="5_oeq0c"]
 
-[node name="PlayerStats" type="VBoxContainer" unique_id=1939434656]
+[node name="PlayerStats" type="Control" unique_id=856820888]
 custom_minimum_size = Vector2(40, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 68.0
 size_flags_vertical = 4
-theme_override_constants/separation = 3
 script = ExtResource("1_log7q")
 
-[node name="Graphics" type="HBoxContainer" parent="." unique_id=1498850063]
+[node name="StatBlock" type="VBoxContainer" parent="." unique_id=921360684]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 49.0
+theme_override_constants/separation = 3
+
+[node name="Graphics" type="HBoxContainer" parent="StatBlock" unique_id=1498850063]
 layout_mode = 2
 
-[node name="Portrait" type="TextureRect" parent="Graphics" unique_id=237778452]
+[node name="Portrait" type="TextureRect" parent="StatBlock/Graphics" unique_id=237778452]
 layout_mode = 2
 texture = ExtResource("2_y0xxe")
 stretch_mode = 2
 
-[node name="PlayerPosition" type="TextureRect" parent="Graphics" unique_id=69137343]
+[node name="PlayerPosition" type="TextureRect" parent="StatBlock/Graphics" unique_id=69137343]
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("3_log7q")
 stretch_mode = 2
 
-[node name="PlayerName" type="Label" parent="." unique_id=598900451]
+[node name="PlayerName" type="Label" parent="StatBlock" unique_id=598900451]
 layout_mode = 2
 theme_override_font_sizes/font_size = 8
 text = "PLYR1"
 
-[node name="Health" type="VBoxContainer" parent="." unique_id=339583281]
+[node name="Health" type="VBoxContainer" parent="StatBlock" unique_id=339583281]
 layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="HP" type="Label" parent="Health" unique_id=682086667]
+[node name="HP" type="Label" parent="StatBlock/Health" unique_id=682086667]
 layout_mode = 2
 theme_override_font_sizes/font_size = 8
 text = "9999/"
 horizontal_alignment = 2
 
-[node name="HPMax" type="Label" parent="Health" unique_id=1729668676]
+[node name="HPMax" type="Label" parent="StatBlock/Health" unique_id=1729668676]
 layout_mode = 2
 theme_override_font_sizes/font_size = 8
 text = "9999"
 horizontal_alignment = 2
+
+[node name="ActivePlayerWindow" type="NinePatchRect" parent="." unique_id=2054054382]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_left = -7.0
+offset_top = -15.0
+offset_right = 46.0
+offset_bottom = 52.0
+texture = ExtResource("4_35gu0")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ActiveIcon" type="TextureRect" parent="ActivePlayerWindow" unique_id=369070435]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 6.0
+offset_right = 33.0
+offset_bottom = 14.0
+texture = ExtResource("5_oeq0c")
+stretch_mode = 2

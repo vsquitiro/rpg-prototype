@@ -12,10 +12,14 @@ var current_player_index: int = -1
 var menu_target: MenuTargets = MenuTargets.OPTIONS
 
 @onready var event_queue: EventQueue = $EventQueue
-@onready var _commands_menu: Menu = $MarginContainer/VBoxContainer/Bottom/Commands/MarginContainer/CommandMenu
-@onready var _enemy_buttons: Menu = $MarginContainer/VBoxContainer/Combatants/EnemyArea/EnemyButtons
-@onready var _party_buttons: Menu = $MarginContainer/VBoxContainer/Combatants/PartyArea/PartyButtons
-@onready var _party_hexes: PartyHexes = $MarginContainer/VBoxContainer/Combatants/PartyArea/PartyHexes
+@onready var _commands_menu: Menu = $MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu
+@onready var _enemy_buttons: Menu = $MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons
+@onready var _party_buttons: Menu = $MarginContainer/BattlePane/Combatants/PartyArea/PartyButtons
+@onready var _party_hexes: PartyHexes = $MarginContainer/BattlePane/Combatants/PartyArea/PartyHexes
+@onready var _party_columns: PartyColumns = $MarginContainer/BattlePane/Bottom/PartyStats/MarginContainer/PartyColumns
+@onready var _menu_cursor: TextureRect = $MenuCursor
+@onready var _info_pane: InfoPane = $MarginContainer/BattlePane/MarginContainer/InfoPane
+
 
 var _button_groups = []
 
@@ -26,11 +30,18 @@ func _ready() -> void:
 func goto_next_player(dir: int = 1) -> void:
 	# TODO not sure if I love this approach
 	if current_player_index > -1:
+		# TODO make a function to handle all aspects of activating/disactivating
 		var inactive_hex = party[current_player_index].pos
 		_party_hexes.toggle_hex_active(inactive_hex, false)
+		_party_columns.toggle_active_window(current_player_index, false)
 	current_player_index += dir
 	
 	if current_player_index >= Data.party.size():
+		get_viewport().gui_release_focus()
+		_menu_cursor.hide()
+		# TODO hide the cursor selection for now, but eventually hijack for battle
+		_info_pane.hide()
+		
 		print('enemies initializing')
 		# TODO eventually genericize this, but for prototype use two snarl_bat enemies
 		for enemy: EnemyButton in _enemy_buttons.get_buttons():
@@ -39,15 +50,18 @@ func goto_next_player(dir: int = 1) -> void:
 			# TODO hard coding ATTACK for now
 			event_queue.add(EventQueue.Commands.ATTACK, enemy.data, target)
 			
-		print('The event queue:', event_queue.events)
-		#event_queue.run()
-		pass
-	else:
-		#TODO check if player is alive
-		var active_hex = party[current_player_index].pos
-		_party_hexes.toggle_hex_active(active_hex, true)
-		_commands_menu.button_focus()
-		pass
+		await(event_queue.run())
+		# TODO not sure about this
+		current_player_index = 0
+		print('The event queue finished')
+		
+	#TODO check if player is alive
+	var active_hex = party[current_player_index].pos
+	_party_hexes.toggle_hex_active(active_hex, true)
+	_party_columns.toggle_active_window(current_player_index, true)
+	_commands_menu.button_focus()
+	await get_tree().process_frame
+	_menu_cursor.show()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -82,6 +96,8 @@ func _on_party_buttons_button_pressed(button: BaseButton) -> void:
 
 func _target_battle_actor(target: BattleActor) -> void:
 	print(target.name, ": HP=", target.hp, "/", target.hp_max)
+
+
 	event_queue.add(command, Data.party[current_player_index], target)
 	goto_next_player()
 

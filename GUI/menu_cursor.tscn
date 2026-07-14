@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bsefeng0kj2p7" path="res://GUI/menu_cursor.gd" id="2_5cc5m"]
 
 [node name="MenuCursor" type="TextureRect" unique_id=1156811881]
+visible = false
 anchors_preset = -1
 anchor_right = 0.05
 anchor_bottom = 0.089

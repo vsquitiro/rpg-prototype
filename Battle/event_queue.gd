@@ -15,3 +15,18 @@ func add(command: Commands, actor: BattleActor, target: BattleActor ) -> void:
 	events.append({ "command": command, "actor": actor, "target": target })
 	print("Adding event: ", actor.name, " ", Commands.keys()[command], " ", target.name)
 	print('Event Queue front: ', events.front())
+
+func run() -> void:
+	# TODO not sure about this, seems to be just based on the order in which they went in
+	if !events.size():
+		return
+	var event: Dictionary = events.pop_front()
+	
+	print("Running event: ", event.actor.name, " ", Commands.keys()[event.command], " ", event.target.name)
+	
+	match event.command:
+		Commands.ATTACK:
+			pass
+	
+	await(get_tree().create_timer(0.5).timeout)
+	await run()

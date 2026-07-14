@@ -8,3 +8,6 @@ func _ready() -> void:
 			get_child(i).data = party[i]
 		else:
 			get_child(i).data = null
+
+func toggle_active_window(i: int, active: bool):
+	get_child(i).toggle_active_window(active)

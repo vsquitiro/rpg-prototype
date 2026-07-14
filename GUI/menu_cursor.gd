@@ -14,8 +14,6 @@ func _process(_delta: float) -> void:
 func _on_viewport_gui_focus_changed(node: Control) -> void:
 	if node is BaseButton:
 		target = node
-		show()
 		set_process(true)
 	else:
-		hide()
 		set_process(false)
