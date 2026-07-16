@@ -26,7 +26,8 @@ func run() -> void:
 	
 	match event.command:
 		Commands.ATTACK:
-			pass
+			print('event queue calls for heal_hurt')
+			event.target.heal_hurt(-1)
 	
 	await(get_tree().create_timer(0.5).timeout)
 	await run()

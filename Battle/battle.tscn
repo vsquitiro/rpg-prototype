@@ -246,7 +246,15 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 2
 
-[node name="Commands" type="NinePatchRect" parent="MarginContainer/BattlePane/Bottom" unique_id=1567561017]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BattlePane/Bottom" unique_id=1801026351]
+custom_minimum_size = Vector2(110, 56)
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Commands" type="NinePatchRect" parent="MarginContainer/BattlePane/Bottom/MarginContainer" unique_id=1567561017]
 custom_minimum_size = Vector2(110, 56)
 layout_mode = 2
 texture = ExtResource("3_6d22a")
@@ -256,7 +264,7 @@ patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BattlePane/Bottom/Commands" unique_id=184915853]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands" unique_id=184915853]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -264,14 +272,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CommandMenu" type="GridContainer" parent="MarginContainer/BattlePane/Bottom/Commands/MarginContainer" unique_id=715734847]
+[node name="CommandMenu" type="GridContainer" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer" unique_id=715734847]
 layout_mode = 2
 theme_override_constants/h_separation = -4
 theme_override_constants/v_separation = 1
 columns = 2
 script = ExtResource("11_706sf")
 
-[node name="AttackButton" type="Button" parent="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" unique_id=1565336346]
+[node name="AttackButton" type="Button" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" unique_id=1565336346]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../EscapeButton")
@@ -281,7 +289,7 @@ focus_neighbor_bottom = NodePath("../GuardButton")
 text = "Attack"
 flat = true
 
-[node name="SpellButton" type="Button" parent="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" unique_id=459202937]
+[node name="SpellButton" type="Button" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" unique_id=459202937]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../AttackButton")
@@ -291,7 +299,7 @@ focus_neighbor_bottom = NodePath("../ItemButton")
 text = "Spell"
 flat = true
 
-[node name="GuardButton" type="Button" parent="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" unique_id=1291011357]
+[node name="GuardButton" type="Button" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" unique_id=1291011357]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../SpellButton")
@@ -301,7 +309,7 @@ focus_neighbor_bottom = NodePath("../SwapButton")
 text = "Guard"
 flat = true
 
-[node name="ItemButton" type="Button" parent="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" unique_id=1800818597]
+[node name="ItemButton" type="Button" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" unique_id=1800818597]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../GuardButton")
@@ -311,7 +319,7 @@ focus_neighbor_bottom = NodePath("../EscapeButton")
 text = "Item"
 flat = true
 
-[node name="SwapButton" type="Button" parent="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" unique_id=278211032]
+[node name="SwapButton" type="Button" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" unique_id=278211032]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../ItemButton")
@@ -321,7 +329,7 @@ focus_neighbor_bottom = NodePath("../SpellButton")
 text = "Swap"
 flat = true
 
-[node name="EscapeButton" type="Button" parent="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" unique_id=327231393]
+[node name="EscapeButton" type="Button" parent="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" unique_id=327231393]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../SwapButton")
@@ -365,5 +373,5 @@ grow_vertical = 1
 
 [connection signal="button_pressed" from="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" to="." method="_on_enemy_buttons_button_pressed"]
 [connection signal="button_pressed" from="MarginContainer/BattlePane/Combatants/PartyArea/PartyButtons" to="." method="_on_party_buttons_button_pressed"]
-[connection signal="button_focused" from="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" to="." method="_on_command_menu_button_focused"]
-[connection signal="button_pressed" from="MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu" to="." method="_on_command_menu_button_pressed"]
+[connection signal="button_focused" from="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" to="." method="_on_command_menu_button_focused"]
+[connection signal="button_pressed" from="MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu" to="." method="_on_command_menu_button_pressed"]

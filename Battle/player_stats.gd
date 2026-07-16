@@ -9,10 +9,12 @@ class_name PlayerStats extends Control
 
 var data: BattleActorPlayer = null:
 	set(value):
-		data = value
-		
-		if data:
-			data = data.new()
+		if value:
+			if value.is_connected("hp_changed", _on_data_hp_changed):
+				value.hp_changed.disconnect(_on_data_hp_changed)
+				
+			data = value
+			data.hp_changed.connect(_on_data_hp_changed)
 			_player_name.text = data.name
 			_hp.text = str(data.hp) + '/'
 			_hp_max.text = str(data.hp_max)
@@ -25,3 +27,7 @@ var data: BattleActorPlayer = null:
 
 func toggle_active_window(active: bool):
 	_active_player_window.visible = active
+
+func _on_data_hp_changed(hp: int, hp_max: int, value_change: int) -> void:
+	print('_on_data_hp_changed called', hp, hp_max, value_change)
+	_hp.text = str(hp)

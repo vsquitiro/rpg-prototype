@@ -12,7 +12,8 @@ var current_player_index: int = -1
 var menu_target: MenuTargets = MenuTargets.OPTIONS
 
 @onready var event_queue: EventQueue = $EventQueue
-@onready var _commands_menu: Menu = $MarginContainer/BattlePane/Bottom/Commands/MarginContainer/CommandMenu
+@onready var _commands: NinePatchRect = $MarginContainer/BattlePane/Bottom/MarginContainer/Commands
+@onready var _commands_menu: Menu = $MarginContainer/BattlePane/Bottom/MarginContainer/Commands/MarginContainer/CommandMenu
 @onready var _enemy_buttons: Menu = $MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons
 @onready var _party_buttons: Menu = $MarginContainer/BattlePane/Combatants/PartyArea/PartyButtons
 @onready var _party_hexes: PartyHexes = $MarginContainer/BattlePane/Combatants/PartyArea/PartyHexes
@@ -50,6 +51,7 @@ func goto_next_player(dir: int = 1) -> void:
 			# TODO hard coding ATTACK for now
 			event_queue.add(EventQueue.Commands.ATTACK, enemy.data, target)
 			
+		_commands.hide()
 		await(event_queue.run())
 		# TODO not sure about this
 		current_player_index = 0
@@ -59,6 +61,7 @@ func goto_next_player(dir: int = 1) -> void:
 	var active_hex = party[current_player_index].pos
 	_party_hexes.toggle_hex_active(active_hex, true)
 	_party_columns.toggle_active_window(current_player_index, true)
+	_commands.show()
 	_commands_menu.button_focus()
 	await get_tree().process_frame
 	_menu_cursor.show()
