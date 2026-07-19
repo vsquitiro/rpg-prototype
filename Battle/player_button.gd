@@ -15,8 +15,7 @@ var data: BattleActorPlayer = null:
 		
 		if data:
 			data = data.new()
-			# TODO reassess this method after learning more about GODOT
-			self.texture_normal = ResourceLoader.load("res://Battle/Art/Party/Combat/%s_standby.png" % BattleActorPlayer.PlayerClass.keys()[data.player_class])
+			self.texture_normal = data.sprite
 			self.position = PARTY_POSITIONS[data.pos]
 			show()
 		else:

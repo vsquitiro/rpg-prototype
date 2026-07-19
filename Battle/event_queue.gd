@@ -26,6 +26,7 @@ func run() -> void:
 	
 	match event.command:
 		Commands.ATTACK:
+			# TODO we need to make sure the actor is still in a state to continue this actions
 			print('event queue calls for heal_hurt')
 			event.target.heal_hurt(-1)
 	

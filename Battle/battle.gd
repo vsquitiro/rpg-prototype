@@ -39,8 +39,10 @@ func goto_next_player(dir: int = 1) -> void:
 	
 	if current_player_index >= Data.party.size():
 		get_viewport().gui_release_focus()
+		# TODO releasing the viewport, not sure why still focusing on the enemy, moving for now
+		_commands_menu.button_focus()
 		_menu_cursor.hide()
-		# TODO hide the cursor selection for now, but eventually hijack for battle
+		# TODO hide info pane cursor selection for now, but eventually hijack for battle
 		_info_pane.hide()
 		
 		print('enemies initializing')

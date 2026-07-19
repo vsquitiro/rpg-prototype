@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="BattleActorPlayer" format=3 uid="uid://co56gabmitgq2"]
 
 [ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_0uklv"]
+[ext_resource type="Texture2D" uid="uid://dsuog5ns40wdh" path="res://Battle/Art/Party/Combat/KNIGHT_standby.png" id="2_aj5ai"]
 
 [resource]
 script = ExtResource("1_0uklv")
+sprite = ExtResource("2_aj5ai")
 name = "Tank"
 hp_max = 45
 metadata/_custom_type_script = "uid://dwguej3t5aece"

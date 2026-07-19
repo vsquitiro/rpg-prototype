@@ -28,6 +28,6 @@ var data: BattleActorPlayer = null:
 func toggle_active_window(active: bool):
 	_active_player_window.visible = active
 
-func _on_data_hp_changed(hp: int, hp_max: int, value_change: int) -> void:
-	print('_on_data_hp_changed called', hp, hp_max, value_change)
+func _on_data_hp_changed(hp: int, hp_delta: int) -> void:
+	print('_on_data_hp_changed called', hp, hp_delta)
 	_hp.text = str(hp)

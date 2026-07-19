@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="BattleActorPlayer" format=3 uid="uid://dprqf6kvk438t"]
 
 [ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_2f21t"]
+[ext_resource type="Texture2D" uid="uid://db4k36k1ticar" path="res://Battle/Art/Party/Combat/HEALER_standby.png" id="2_6rdn1"]
 
 [resource]
 script = ExtResource("1_2f21t")
 player_class = 3
+sprite = ExtResource("2_6rdn1")
 row = 1
 pos = 4
 name = "Heals"
