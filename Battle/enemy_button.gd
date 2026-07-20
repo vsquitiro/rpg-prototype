@@ -21,12 +21,15 @@ const ENEMY_POSITIONS: Array[Vector2] = [
 		position = ENEMY_POSITIONS[data.pos]
 
 func _on_data_hp_changed(hp: int, hp_delta) -> void:
-	var hit_text: Label = HIT_TEXT.instantiate()
-	hit_text.text = str(abs(hp_delta))
+	var hit_text: HitText = HIT_TEXT.instantiate()
 	add_child(hit_text)
-	hit_text.position = Vector2(0,0)
+	hit_text.size.x = size.x
+	#hit_text.set_text(str(abs(hp_delta)))
+	hit_text.set_text('2412')
 	
+	hit_text.position = Vector2(-4,20)
 	
+	# TODO think I need to make a (catch damage for after text changes)
 	if hp <= 0:
 		# TODO this just deletes the node, def need to animate, may need treasure exp etc
 		queue_free()

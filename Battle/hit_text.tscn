@@ -1,26 +1,44 @@
 [gd_scene format=3 uid="uid://doi3d5oeicct1"]
 
-[ext_resource type="FontFile" uid="uid://r70fy3moaurx" path="res://Fonts/6px/6px-Expert.ttf" id="1_morlk"]
 [ext_resource type="Script" uid="uid://blw1ha3wlssmj" path="res://Battle/hit_text.gd" id="2_dosle"]
+[ext_resource type="Texture2D" uid="uid://det0dhrrkjpgh" path="res://Battle/Art/HpText/white_9.png" id="2_jak5y"]
 
-[node name="HitText" type="Label" unique_id=1768893927]
+[node name="HitText" type="MarginContainer" unique_id=2057646421]
+z_index = 10
+z_as_relative = false
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -308.0
-offset_bottom = -173.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 0
-theme_override_constants/shadow_offset_y = 0
-theme_override_constants/outline_size = 2
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("1_morlk")
-theme_override_font_sizes/font_size = 6
-text = "9999"
+offset_right = 17.0
+offset_bottom = 7.0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 script = ExtResource("2_dosle")
+
+[node name="Digits" type="HBoxContainer" parent="." unique_id=94190276]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -1
+
+[node name="TextureRect1" type="TextureRect" parent="Digits" unique_id=1723702124]
+custom_minimum_size = Vector2(5, 7)
+layout_mode = 2
+texture = ExtResource("2_jak5y")
+
+[node name="TextureRect2" type="TextureRect" parent="Digits" unique_id=399919139]
+custom_minimum_size = Vector2(5, 7)
+layout_mode = 2
+texture = ExtResource("2_jak5y")
+
+[node name="TextureRect3" type="TextureRect" parent="Digits" unique_id=113106349]
+custom_minimum_size = Vector2(5, 7)
+layout_mode = 2
+texture = ExtResource("2_jak5y")
+
+[node name="TextureRect4" type="TextureRect" parent="Digits" unique_id=1027806591]
+custom_minimum_size = Vector2(5, 7)
+layout_mode = 2
+texture = ExtResource("2_jak5y")
 
 [node name="Free" type="Timer" parent="." unique_id=756523094]
 one_shot = true
