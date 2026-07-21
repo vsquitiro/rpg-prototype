@@ -2,8 +2,6 @@ class_name HitText extends MarginContainer
 
 @onready var _digits: HBoxContainer = $Digits
 
-# TODO will possibly use sprites instead 
-
 # TODO there must be a simpler way to do this but for now this works
 
 var text_floor: float = INF
@@ -32,11 +30,11 @@ func _on_free_timeout() -> void:
 	queue_free()
 
 func set_text(text: String):
-	# TODO so far this is just for damage numbers
+	# TODO so far this is just for damage numbers / not healing
 	var digit_array = _digits.get_children()
 	
 	for i: int in range(4):
 		if text.length() > i:
-			digit_array[i].texture = ResourceLoader.load("res://Battle/Art/HpText/white_large_%s.png" % str(text[i]))
+			digit_array[i].texture = ResourceLoader.load("res://Battle/Art/HpText/red_large_%s.png" % str(text[i]))
 		else:
 			digit_array[i].queue_free()
