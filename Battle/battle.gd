@@ -1,15 +1,15 @@
 class_name Battle extends Control
 
-enum MenuTargets {
+enum MENU_TARGET {
 	OPTIONS,
 	COMBATANTS,
 }
 
 var party: Array = Data.party
-var command: EventQueue.Commands = EventQueue.Commands.ATTACK
+var command: EventQueue.COMMAND = EventQueue.COMMAND.ATTACK
 var current_player_index: int = -1
 
-var menu_target: MenuTargets = MenuTargets.OPTIONS
+var menu_target: MENU_TARGET = MENU_TARGET.OPTIONS
 
 @onready var event_queue: EventQueue = $EventQueue
 @onready var _commands: NinePatchRect = $MarginContainer/BattlePane/Bottom/MarginContainer/Commands
@@ -51,7 +51,7 @@ func goto_next_player(dir: int = 1) -> void:
 			# TODO set up actual targeting
 			var target: BattleActor = party.pick_random() 
 			# TODO hard coding ATTACK for now
-			event_queue.add(EventQueue.Commands.ATTACK, enemy.data, target)
+			event_queue.add(EventQueue.COMMAND.ATTACK, enemy.data, target)
 			
 		_commands.hide()
 		await(event_queue.run())
@@ -71,11 +71,11 @@ func goto_next_player(dir: int = 1) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		match menu_target:
-			MenuTargets.OPTIONS:
+			MENU_TARGET.OPTIONS:
 				# TODO revert back to previoius player and cleanse event queue
 				pass
-			MenuTargets.COMBATANTS:
-				menu_target = MenuTargets.OPTIONS
+			MENU_TARGET.COMBATANTS:
+				menu_target = MENU_TARGET.OPTIONS
 				_handle_focus_swap([_commands_menu])
 				_commands_menu.button_focus()
 
@@ -86,8 +86,8 @@ func _on_command_menu_button_pressed(button: BaseButton) -> void:
 	print("Button pressed:", button.text)
 	match button.text:
 		"Attack":
-			menu_target = MenuTargets.COMBATANTS
-			command = EventQueue.Commands.ATTACK
+			menu_target = MENU_TARGET.COMBATANTS
+			command = EventQueue.COMMAND.ATTACK
 			
 			print('Starting Attack process')
 			_handle_focus_swap([_enemy_buttons, _party_buttons])

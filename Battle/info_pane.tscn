@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://2tmuiwkj2cym"]
 
-[ext_resource type="Texture2D" uid="uid://cp0x14jxjlqmq" path="res://GUI/Art/gui_frame.png" id="1_p8d8s"]
+[ext_resource type="Texture2D" uid="uid://cp0x14jxjlqmq" path="res://Art/GUI/gui_frame.png" id="1_p8d8s"]
 
 [node name="InfoPane" type="NinePatchRect" unique_id=1427388477]
 custom_minimum_size = Vector2(0, 18)

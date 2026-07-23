@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BattleActorEnemy" format=3 uid="uid://cb84k3h33pium"]
 
 [ext_resource type="Script" uid="uid://c8iijfboe6km" path="res://Battle/battle_actor_enemy.gd" id="1_snu7b"]
-[ext_resource type="Texture2D" uid="uid://dicsu7ywgkhoo" path="res://Battle/Art/Enemies/snarl_bat.png" id="2_b4s3c"]
+[ext_resource type="Texture2D" uid="uid://dicsu7ywgkhoo" path="res://Art/Enemies/snarl_bat.png" id="2_b4s3c"]
 
 [resource]
 script = ExtResource("1_snu7b")

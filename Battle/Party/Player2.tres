@@ -1,12 +1,11 @@
 [gd_resource type="Resource" script_class="BattleActorPlayer" format=3 uid="uid://do0513krnlllk"]
 
+[ext_resource type="Resource" uid="uid://l46llglfpapd" path="res://Shared/PlayerClasses/fighter.tres" id="1_jiw86"]
 [ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_xjpva"]
-[ext_resource type="Texture2D" uid="uid://ceujnddm6ohx7" path="res://Battle/Art/Party/Combat/FIGHTER_standby.png" id="2_jiw86"]
 
 [resource]
 script = ExtResource("1_xjpva")
-player_class = 1
-sprite = ExtResource("2_jiw86")
+player_class = ExtResource("1_jiw86")
 pos = 2
 name = "DD"
 hp_max = 32

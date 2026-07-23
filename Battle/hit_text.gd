@@ -35,6 +35,6 @@ func set_text(text: String):
 	
 	for i: int in range(4):
 		if text.length() > i:
-			digit_array[i].texture = ResourceLoader.load("res://Battle/Art/HpText/red_large_%s.png" % str(text[i]))
+			digit_array[i].texture = ResourceLoader.load("res://Art/HpText/red_large_%s.png" % str(text[i]))
 		else:
 			digit_array[i].queue_free()

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://o18g8x7bs1dm"]
 
-[ext_resource type="Texture2D" uid="uid://crdns10e208an" path="res://GUI/Art/cursor.png" id="1_ilbi8"]
+[ext_resource type="Texture2D" uid="uid://crdns10e208an" path="res://Art/GUI/cursor.png" id="1_ilbi8"]
 [ext_resource type="Script" uid="uid://bsefeng0kj2p7" path="res://GUI/menu_cursor.gd" id="2_5cc5m"]
 
 [node name="MenuCursor" type="TextureRect" unique_id=1156811881]

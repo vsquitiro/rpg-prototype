@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xwp26gj1un33"]
 
-[ext_resource type="Texture2D" uid="uid://b6qy3e27rlgta" path="res://Battle/Art/Layout/hex_enemy.png" id="1_ym8wo"]
+[ext_resource type="Texture2D" uid="uid://b6qy3e27rlgta" path="res://Art/Layout/hex_enemy.png" id="1_ym8wo"]
 
 [node name="EnemyHex" type="TextureButton" unique_id=946932979]
 offset_right = 40.0

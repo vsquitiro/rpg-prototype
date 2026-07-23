@@ -2,14 +2,12 @@
 
 signal hp_changed(hp, hp_delta)
 
-enum Row {
+enum ROW {
 	FRONT,
 	BACK
 }
 
-@export var sprite : Texture = null
-
-@export var row: Row = Row.FRONT
+@export var row: ROW = ROW.FRONT
 @export var pos: int = 1
 
 @export var name: String = ""

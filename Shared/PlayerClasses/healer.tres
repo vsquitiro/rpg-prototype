@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerClass" format=3 uid="uid://b152sad3xe2ss"]
+
+[ext_resource type="Texture2D" uid="uid://xvcw506pmxph" path="res://Art/Party/Stats/Portraits/portrait_HEALER.png" id="1_4nfma"]
+[ext_resource type="Script" uid="uid://mbbtntn5lv3s" path="res://Shared/PlayerClasses/player_class.gd" id="1_p5k2u"]
+[ext_resource type="Texture2D" uid="uid://db4k36k1ticar" path="res://Art/Party/Combat/healer_standby.png" id="3_big5v"]
+
+[resource]
+script = ExtResource("1_p5k2u")
+name = "Water Bearer"
+standby_sprite = ExtResource("3_big5v")
+portrait_sprite = ExtResource("1_4nfma")
+metadata/_custom_type_script = "uid://mbbtntn5lv3s"

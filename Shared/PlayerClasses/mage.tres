@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerClass" format=3 uid="uid://ja7pip8s3rt2"]
+
+[ext_resource type="Script" uid="uid://mbbtntn5lv3s" path="res://Shared/PlayerClasses/player_class.gd" id="1_ei1nf"]
+[ext_resource type="Texture2D" uid="uid://be706cdj7q0av" path="res://Art/Party/Stats/Portraits/portrait_MAGE.png" id="1_ykc6k"]
+[ext_resource type="Texture2D" uid="uid://bjfdclb017tra" path="res://Art/Party/Combat/mage_standby.png" id="2_gghqe"]
+
+[resource]
+script = ExtResource("1_ei1nf")
+name = "Ritualist"
+standby_sprite = ExtResource("2_gghqe")
+portrait_sprite = ExtResource("1_ykc6k")
+metadata/_custom_type_script = "uid://mbbtntn5lv3s"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerClass" format=3 uid="uid://l46llglfpapd"]
+
+[ext_resource type="Script" uid="uid://mbbtntn5lv3s" path="res://Shared/PlayerClasses/player_class.gd" id="1_0wjvv"]
+[ext_resource type="Texture2D" uid="uid://w1dq0npite4d" path="res://Art/Party/Stats/Portraits/portrait_FIGHTER.png" id="1_tvfvu"]
+[ext_resource type="Texture2D" uid="uid://ceujnddm6ohx7" path="res://Art/Party/Combat/fighter_standby.png" id="2_m1bgl"]
+
+[resource]
+script = ExtResource("1_0wjvv")
+name = "Duelist"
+standby_sprite = ExtResource("2_m1bgl")
+portrait_sprite = ExtResource("1_tvfvu")
+metadata/_custom_type_script = "uid://mbbtntn5lv3s"

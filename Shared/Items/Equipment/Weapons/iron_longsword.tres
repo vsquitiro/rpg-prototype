@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://lgc7fngmxgas"]
+
+[ext_resource type="Script" uid="uid://yolpbao0f4xc" path="res://Shared/Items/Equipment/Weapons/weapon.gd" id="1_pu5kc"]
+[ext_resource type="Texture2D" uid="uid://ca6bst6rrphxa" path="res://Art/Items/Equipment/Shadows/shadow_longsword.png" id="2_n8gdd"]
+[ext_resource type="Texture2D" uid="uid://bduuml33o5jm4" path="res://Art/Items/Equipment/Weapons/weapon_iron_longsword.png" id="3_r80c4"]
+
+[resource]
+script = ExtResource("1_pu5kc")
+name = "Iron Longsword"
+sprite = ExtResource("3_r80c4")
+shadow = ExtResource("2_n8gdd")
+metadata/_custom_type_script = "uid://yolpbao0f4xc"

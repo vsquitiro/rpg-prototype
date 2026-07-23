@@ -1,12 +1,11 @@
 [gd_resource type="Resource" script_class="BattleActorPlayer" format=3 uid="uid://c8dw0ybjukb2q"]
 
+[ext_resource type="Resource" uid="uid://ja7pip8s3rt2" path="res://Shared/PlayerClasses/mage.tres" id="1_05lpa"]
 [ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_m0isc"]
-[ext_resource type="Texture2D" uid="uid://bjfdclb017tra" path="res://Battle/Art/Party/Combat/MAGE_standby.png" id="2_05lpa"]
 
 [resource]
 script = ExtResource("1_m0isc")
-player_class = 2
-sprite = ExtResource("2_05lpa")
+player_class = ExtResource("1_05lpa")
 row = 1
 pos = 3
 name = "Mage"

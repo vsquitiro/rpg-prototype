@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csnv22ig4b8m7"]
 
-[ext_resource type="Texture2D" uid="uid://dsuog5ns40wdh" path="res://Battle/Art/Party/Combat/KNIGHT_standby.png" id="1_ovprn"]
+[ext_resource type="Texture2D" uid="uid://dsuog5ns40wdh" path="res://Art/Party/Combat/knight_standby.png" id="1_ovprn"]
 [ext_resource type="Script" uid="uid://bulmye1ci88gi" path="res://Battle/player_button.gd" id="2_j0wye"]
 
 [node name="PlayerButton" type="TextureButton" unique_id=971554758]

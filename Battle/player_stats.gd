@@ -15,9 +15,9 @@ var data: BattleActorPlayer = null:
 			_player_name.text = data.name
 			_hp.text = str(data.hp) + '/'
 			_hp_max.text = str(data.hp_max)
+			_portrait.texture=data.player_class.portrait_sprite
 			# TODO reassess this method after learning more about GODOT
-			_portrait.texture=ResourceLoader.load("res://Battle/Art/Party/Stats/Portraits/portrait_%s.png" % BattleActorPlayer.PlayerClass.keys()[data.player_class])
-			_player_position.texture=ResourceLoader.load("res://Battle/Art/Party/Stats/Positions/p_%s.png" % data.pos)
+			_player_position.texture=ResourceLoader.load("res://Art/Party/Stats/Positions/p_%s.png" % data.pos)
 			show()
 		else:
 			hide()
@@ -25,5 +25,5 @@ var data: BattleActorPlayer = null:
 func toggle_active_window(active: bool):
 	_active_player_window.visible = active
 
-func _on_data_hp_changed(hp: int, hp_delta: int) -> void:
+func _on_data_hp_changed(hp: int, _hp_delta: int) -> void:
 	_hp.text = str(hp)
