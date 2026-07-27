@@ -1,6 +1,6 @@
 class_name PlayerButton extends BattleActorButton
 
-const BATTLE_WEAPON: PackedScene = preload("res://Battle/battle_weapon.tscn")
+const BATTLE_EQUIPMENT: PackedScene = preload("res://Battle/battle_equipment.tscn")
 
 const PARTY_POSITIONS: Array[Vector2] = [
 	Vector2(0,2),
@@ -11,6 +11,9 @@ const PARTY_POSITIONS: Array[Vector2] = [
 	Vector2(87,-22),
 ]
 
+var weapon: BattleEquipment = null
+var offhand: BattleEquipment = null
+
 func get_hit_text_offset() -> Vector2:
 	return Vector2(-4,12)
 
@@ -19,18 +22,28 @@ var data: BattleActorPlayer = null:
 		data = value
 		
 		if data:
-			print('the data is being set')
-			# TODO change z index back for weaponsprite to something normal
 			data.hp_changed.connect(_on_data_hp_changed)
-			# TODO eventually change this to idle sprite
-			texture_normal = data.player_class.standby_sprite
 			position = PARTY_POSITIONS[data.pos]
 			
 			if data.weapon:
-				var weapon: BattleWeapon = BATTLE_WEAPON.instantiate()
+				print('we are setting weapon')
+				weapon = BATTLE_EQUIPMENT.instantiate()
+				print('weapon:', weapon)
 				add_child(weapon)
-				weapon.set_sprite(data.weapon)
+			if data.offhand:
+				offhand = BATTLE_EQUIPMENT.instantiate()
+				add_child(offhand)
+				
+			set_sprite(PlayerClass.FRAME.IDLE)
 			
 			show()
 		else:
 			hide()
+
+func set_sprite(frame: PlayerClass.FRAME):
+	texture_normal = data.player_class.get_sprite(frame)
+	if data.weapon && weapon:
+		weapon.set_sprite(data.weapon, frame)
+	if data.offhand && offhand:
+		offhand.set_sprite(data.offhand, frame)
+		

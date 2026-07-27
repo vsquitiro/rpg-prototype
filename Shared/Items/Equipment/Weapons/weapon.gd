@@ -6,9 +6,13 @@ enum WEAPON_TYPE {
 
 @export var weapon_type : WEAPON_TYPE = WEAPON_TYPE.LONGSWORD
 
-func get_position() -> Vector2:
+func get_position_dict(frame: PlayerClass.FRAME) -> Dictionary:
 	match weapon_type:
 		WEAPON_TYPE.LONGSWORD:
-			return Vector2(-3,-10)
+			match frame:
+				PlayerClass.FRAME.IDLE:
+					return { 'position': Vector2(10,7), 'order': 0 }
+				PlayerClass.FRAME.STANDBY:
+					return { 'position': Vector2(-3,-10), 'order': 0 }
 			
-	return Vector2(0,0)
+	return { 'position': Vector2(0,0), 'order': 0 }

@@ -10,3 +10,7 @@ func _ready() -> void:
 			get_child(i).data = party[i]
 		else:
 			get_child(i).data = null
+
+func toggle_standby(i: int):
+	var player_button: PlayerButton = get_child(i)
+	player_button.set_sprite(PlayerClass.FRAME.STANDBY)

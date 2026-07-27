@@ -28,14 +28,14 @@ func _ready() -> void:
 	_button_groups.append_array([_commands_menu,_enemy_buttons, _party_buttons])
 	goto_next_player()
 
-func goto_next_player(dir: int = 1) -> void:
+func goto_next_player() -> void:
 	# TODO not sure if I love this approach
 	if current_player_index > -1:
 		# TODO make a function to handle all aspects of activating/disactivating
 		var inactive_hex = party[current_player_index].pos
 		_party_hexes.toggle_hex_active(inactive_hex, false)
 		_party_columns.toggle_active_window(current_player_index, false)
-	current_player_index += dir
+	current_player_index += 1
 	
 	if current_player_index >= Data.party.size():
 		get_viewport().gui_release_focus()
@@ -62,6 +62,7 @@ func goto_next_player(dir: int = 1) -> void:
 	#TODO check if player is alive
 	var active_hex = party[current_player_index].pos
 	_party_hexes.toggle_hex_active(active_hex, true)
+	_party_buttons.toggle_standby(current_player_index)
 	_party_columns.toggle_active_window(current_player_index, true)
 	_commands.show()
 	_commands_menu.button_focus()

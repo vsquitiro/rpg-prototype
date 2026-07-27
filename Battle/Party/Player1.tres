@@ -2,14 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_0uklv"]
 [ext_resource type="Resource" uid="uid://d4b2wvgj1l8qm" path="res://Shared/PlayerClasses/knight.tres" id="1_aj5ai"]
+[ext_resource type="Resource" uid="uid://uw3x36fi57q" path="res://Shared/Items/Equipment/Offhand/wooden_buckler.tres" id="1_lltin"]
 [ext_resource type="Resource" uid="uid://lgc7fngmxgas" path="res://Shared/Items/Equipment/Weapons/iron_longsword.tres" id="3_ramtb"]
 
 [resource]
 script = ExtResource("1_0uklv")
 player_class = ExtResource("1_aj5ai")
 weapon = ExtResource("3_ramtb")
+offhand = ExtResource("1_lltin")
 row = null
-pos = null
 name = "Tank"
 hp_max = 45
 metadata/_custom_type_script = "uid://dwguej3t5aece"

@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="PlayerClass" format=3 uid="uid://d4b2wvgj1l8qm"]
 
+[ext_resource type="Texture2D" uid="uid://dyjlygmmbtx7s" path="res://Art/Party/Combat/knight/idle.png" id="1_0oyoq"]
 [ext_resource type="Texture2D" uid="uid://b5gg1ecfm2484" path="res://Art/Party/Stats/Portraits/portrait_KNIGHT.png" id="1_voak1"]
 [ext_resource type="Script" uid="uid://mbbtntn5lv3s" path="res://Shared/PlayerClasses/player_class.gd" id="1_wsxyy"]
-[ext_resource type="Texture2D" uid="uid://dsuog5ns40wdh" path="res://Art/Party/Combat/knight_standby.png" id="2_bor0r"]
+[ext_resource type="Texture2D" uid="uid://dsuog5ns40wdh" path="res://Art/Party/Combat/knight/standby.png" id="4_roct6"]
 
 [resource]
 script = ExtResource("1_wsxyy")
 name = "Guardian"
-standby_sprite = ExtResource("2_bor0r")
+idle_sprite = ExtResource("1_0oyoq")
+standby_sprite = ExtResource("4_roct6")
 portrait_sprite = ExtResource("1_voak1")
 metadata/_custom_type_script = "uid://mbbtntn5lv3s"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddaygs5hmw686"
-path="res://.godot/imported/weapon_copper_longsword.png-072673861b92487c8cbf645cae13fa0c.ctex"
+uid="uid://do63ghq71iotb"
+path="res://.godot/imported/standby.png-4375796e130db501dd772e684ff119bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Items/Equipment/Weapons/weapon_copper_longsword.png"
-dest_files=["res://.godot/imported/weapon_copper_longsword.png-072673861b92487c8cbf645cae13fa0c.ctex"]
+source_file="res://Art/Items/Equipment/Offhand/WoodenBuckler/standby.png"
+dest_files=["res://.godot/imported/standby.png-4375796e130db501dd772e684ff119bf.ctex"]
 
 [params]
 

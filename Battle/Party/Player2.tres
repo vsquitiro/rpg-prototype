@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="BattleActorPlayer" format=3 uid="uid://do0513krnlllk"]
 
-[ext_resource type="Resource" uid="uid://l46llglfpapd" path="res://Shared/PlayerClasses/fighter.tres" id="1_jiw86"]
+[ext_resource type="Resource" uid="uid://uw3x36fi57q" path="res://Shared/Items/Equipment/Offhand/wooden_buckler.tres" id="1_pdpvx"]
 [ext_resource type="Script" uid="uid://dwguej3t5aece" path="res://Battle/battle_actor_player.gd" id="1_xjpva"]
+[ext_resource type="Resource" uid="uid://d4b2wvgj1l8qm" path="res://Shared/PlayerClasses/knight.tres" id="2_0iago"]
+[ext_resource type="Resource" uid="uid://curtyk0twxw56" path="res://Shared/Items/Equipment/Weapons/copper_longsword.tres" id="4_xgfbe"]
 
 [resource]
 script = ExtResource("1_xjpva")
-player_class = ExtResource("1_jiw86")
+player_class = ExtResource("2_0iago")
+weapon = ExtResource("4_xgfbe")
+offhand = ExtResource("1_pdpvx")
 pos = 2
 name = "DD"
 hp_max = 32

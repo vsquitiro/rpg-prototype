@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsuog5ns40wdh"
-path="res://.godot/imported/knight_standby.png-fc11cc7a1aa204ad26cdd97b1a48537f.ctex"
+uid="uid://vgtfsl2j0sbd"
+path="res://.godot/imported/idle.png-7013575aa622bcf90e4636dfabe3e497.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Party/Combat/knight_standby.png"
-dest_files=["res://.godot/imported/knight_standby.png-fc11cc7a1aa204ad26cdd97b1a48537f.ctex"]
+source_file="res://Art/Items/Equipment/Weapons/CopperLongsword/idle.png"
+dest_files=["res://.godot/imported/idle.png-7013575aa622bcf90e4636dfabe3e497.ctex"]
 
 [params]
 
