@@ -23,6 +23,7 @@ var data: BattleActorPlayer = null:
 		
 		if data:
 			data.hp_changed.connect(_on_data_hp_changed)
+			data.attack_initiated.connect(_on_attack_initiated)
 			position = PARTY_POSITIONS[data.pos]
 			
 			if data.weapon:
@@ -46,3 +47,9 @@ func set_sprite(frame: PlayerClass.FRAME):
 	if data.offhand && offhand:
 		offhand.set_sprite(data.offhand, frame)
 		
+func _on_attack_initiated() -> void:
+	set_sprite(PlayerClass.FRAME.ATTACKING)
+	weapon.flash_instant()
+	await(get_tree().create_timer(0.5).timeout)
+	set_sprite(PlayerClass.FRAME.IDLE)
+	return

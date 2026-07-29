@@ -13,11 +13,9 @@ var events: Array[Dictionary] = []
 
 func add(command: COMMAND, actor: BattleActor, target: BattleActor ) -> void:
 	events.append({ "command": command, "actor": actor, "target": target })
-	print("Adding event: ", actor.name, " ", COMMAND.keys()[command], " ", target.name)
-	print('Event Queue front: ', events.front())
 
 func run() -> void:
-	# TODO still need to order entries in another funciton
+	# TODO still need to order entries in another function
 	if !events.size():
 		return
 	var event: Dictionary = events.pop_front()
@@ -27,6 +25,8 @@ func run() -> void:
 	match event.command:
 		COMMAND.ATTACK:
 			# TODO we need to make sure the actor is still in a state to continue this actions
+			if event.actor is BattleActorPlayer:
+				await(event.actor.attack())
 			print('event queue calls for heal_hurt')
 			event.target.heal_hurt(-1)
 	

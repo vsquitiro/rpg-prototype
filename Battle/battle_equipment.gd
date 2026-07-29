@@ -23,3 +23,8 @@ func set_instant(sprite: Texture, position: Vector2) -> void:
 	instant_sprite.hide()
 	instant_sprite.texture = sprite
 	instant_sprite.position = position
+
+func flash_instant() -> void:
+	instant_sprite.show()
+	await(get_tree().create_timer(0.1).timeout)
+	instant_sprite.hide()
