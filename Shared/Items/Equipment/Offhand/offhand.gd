@@ -11,8 +11,10 @@ func get_position_dict(frame: PlayerClass.FRAME) -> Dictionary:
 		OFFHAND_TYPE.BUCKLER_SHIELD:
 			match frame:
 				PlayerClass.FRAME.IDLE:
-					return { 'position': Vector2(13,8), 'order': 2 }
+					return { 'position': Vector2(13,8), 'order': 1 }
 				PlayerClass.FRAME.STANDBY:
 					return { 'position': Vector2(9,9), 'order': 0 }
+				PlayerClass.FRAME.ATTACKING:
+					return { 'position': Vector2(21,8), 'order': 0 }
 			
 	return { 'position': Vector2(0,0), 'order': 0 }

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://doi3d5oeicct1"]
 
 [ext_resource type="Script" uid="uid://blw1ha3wlssmj" path="res://Battle/hit_text.gd" id="2_dosle"]
-[ext_resource type="Texture2D" uid="uid://det0dhrrkjpgh" path="res://Art/HpText/white_9.png" id="2_jak5y"]
+[ext_resource type="Texture2D" uid="uid://c6ay1o2607i8v" path="res://Art/HpText/red_9.png" id="2_jak5y"]
 
 [node name="HitText" type="MarginContainer" unique_id=2057646421]
 z_index = 10

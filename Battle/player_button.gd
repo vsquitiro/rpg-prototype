@@ -26,10 +26,9 @@ var data: BattleActorPlayer = null:
 			position = PARTY_POSITIONS[data.pos]
 			
 			if data.weapon:
-				print('we are setting weapon')
 				weapon = BATTLE_EQUIPMENT.instantiate()
-				print('weapon:', weapon)
 				add_child(weapon)
+				weapon.set_instant(data.weapon.instant_sprite, data.weapon.get_instant_pos())
 			if data.offhand:
 				offhand = BATTLE_EQUIPMENT.instantiate()
 				add_child(offhand)

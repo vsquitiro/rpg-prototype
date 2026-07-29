@@ -17,7 +17,7 @@ func add(command: COMMAND, actor: BattleActor, target: BattleActor ) -> void:
 	print('Event Queue front: ', events.front())
 
 func run() -> void:
-	# TODO not sure about this, seems to be just based on the order in which they went in
+	# TODO still need to order entries in another funciton
 	if !events.size():
 		return
 	var event: Dictionary = events.pop_front()

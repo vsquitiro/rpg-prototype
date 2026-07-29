@@ -11,6 +11,6 @@ func _ready() -> void:
 		else:
 			get_child(i).data = null
 
-func toggle_standby(i: int):
+func toggle_frame(frame: PlayerClass.FRAME, i: int):
 	var player_button: PlayerButton = get_child(i)
-	player_button.set_sprite(PlayerClass.FRAME.STANDBY)
+	player_button.set_sprite(frame)

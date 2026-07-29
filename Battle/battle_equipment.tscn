@@ -4,12 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://bduuml33o5jm4" path="res://Art/Items/Equipment/Weapons/IronLongsword/standby.png" id="2_xu8af"]
 [ext_resource type="Texture2D" uid="uid://ca6bst6rrphxa" path="res://Art/Items/Equipment/Shadows/Longsword/standby.png" id="3_gmoo7"]
 
-[node name="Equipment" type="Control" unique_id=1579227402]
+[node name="BattleEquipment" type="Control" unique_id=1579227402]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 8.0
 offset_bottom = 24.0
 script = ExtResource("1_dg1jy")
+
+[node name="InstantSprite" type="TextureRect" parent="." unique_id=438542200]
+visible = false
+z_index = 2
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 32.0
+stretch_mode = 2
 
 [node name="EquipmentSprite" type="TextureRect" parent="." unique_id=669576609]
 z_index = 1
