@@ -1,5 +1,7 @@
 class_name EnemyButton extends BattleActorButton
 
+@onready var _animation_player: AnimationPlayer = $AnimationPlayer
+
 const ENEMY_POSITIONS: Array[Vector2] = [
 	Vector2(151,39),
 	Vector2(113,41),
@@ -19,5 +21,11 @@ func get_hit_text_offset() -> Vector2:
 	set(value):
 		data = value.new()
 		data.hp_changed.connect(_on_data_hp_changed)
+		data.display_damage.connect(_on_data_display_damage)
 		texture_normal = data.sprite
 		position = ENEMY_POSITIONS[data.pos]
+
+func _on_data_display_damage() -> void:
+	print(data.name, ' takes damage')
+	_animation_player.play("basic_damage")
+	

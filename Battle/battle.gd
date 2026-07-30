@@ -45,7 +45,6 @@ func goto_next_player() -> void:
 		# TODO hide info pane cursor selection for now, but eventually hijack for battle
 		_info_pane.hide()
 		
-		print('enemies initializing')
 		# TODO eventually genericize this, but for prototype use two snarl_bat enemies
 		for enemy: EnemyButton in _enemy_buttons.get_buttons():
 			# TODO set up actual targeting
@@ -57,7 +56,6 @@ func goto_next_player() -> void:
 		await(event_queue.run())
 		# TODO not sure about this
 		current_player_index = 0
-		print('The event queue finished')
 		
 	#TODO check if player is alive
 	var active_hex = party[current_player_index].pos
@@ -84,13 +82,10 @@ func _on_command_menu_button_focused(_button: BaseButton) -> void:
 	pass # TODO might not need this
 
 func _on_command_menu_button_pressed(button: BaseButton) -> void:
-	print("Button pressed:", button.text)
 	match button.text:
 		"Attack":
 			menu_target = MENU_TARGET.COMBATANTS
 			command = EventQueue.COMMAND.ATTACK
-			
-			print('Starting Attack process')
 			_handle_focus_swap([_enemy_buttons, _party_buttons])
 			_enemy_buttons.button_focus()
 
@@ -102,7 +97,6 @@ func _on_party_buttons_button_pressed(button: BaseButton) -> void:
 
 func _target_battle_actor(target: BattleActor) -> void:
 	print(target.name, ": HP=", target.hp, "/", target.hp_max)
-
 
 	event_queue.add(command, Data.party[current_player_index], target)
 	goto_next_player()

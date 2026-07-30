@@ -19,10 +19,10 @@ func set_sprite(equipment: Equipment, frame: PlayerClass.FRAME) -> void:
 	equipment_sprite.z_index = (position_dict.order * TOTAL_SPRITE_LAYERS) + 1
 	instant_sprite.z_index = (position_dict.order * TOTAL_SPRITE_LAYERS) + 2
 	
-func set_instant(sprite: Texture, position: Vector2) -> void:
+func set_instant(sprite: Texture, pos: Vector2) -> void:
 	instant_sprite.hide()
 	instant_sprite.texture = sprite
-	instant_sprite.position = position
+	instant_sprite.position = pos
 
 func flash_instant() -> void:
 	instant_sprite.show()
