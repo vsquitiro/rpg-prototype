@@ -27,7 +27,9 @@ func run() -> void:
 			# TODO we need to make sure the actor is still in a state to continue this actions
 			if event.actor is BattleActorPlayer:
 				await(event.actor.attack())
-			event.target.take_damage()
+				event.target.take_damage(event.actor.weapon.instant_sprite)
+			else:
+				event.target.take_damage(null)
 			print('event queue calls for heal_hurt')
 			await(get_tree().create_timer(0.2).timeout)
 			event.target.heal_hurt(-1)

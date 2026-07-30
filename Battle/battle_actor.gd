@@ -1,7 +1,7 @@
 @abstract class_name BattleActor extends Resource
 
 signal hp_changed(hp, hp_delta)
-signal display_damage()
+signal display_damage(attack_instant)
 
 enum ROW {
 	FRONT,
@@ -33,5 +33,5 @@ func heal_hurt(value: int) -> void:
 	hp = clampi(hp, 0, hp_max)
 	hp_changed.emit(hp, value)
 
-func take_damage():
-	display_damage.emit()
+func take_damage(attack_instant: Texture):
+	display_damage.emit(attack_instant)

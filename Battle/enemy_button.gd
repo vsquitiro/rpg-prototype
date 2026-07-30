@@ -1,5 +1,7 @@
 class_name EnemyButton extends BattleActorButton
 
+@onready var _sprite: TextureRect = $Sprite
+@onready var _instance: TextureRect = $Instance
 @onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 const ENEMY_POSITIONS: Array[Vector2] = [
@@ -17,15 +19,22 @@ func get_hit_text_offset() -> Vector2:
 	# TODO can extend for different enemy sizes
 	return Vector2(-4,20)
 
+func _ready() -> void:
+	if data:
+		_sprite.texture = data.sprite
+
 @export var data: BattleActorEnemy = null :
 	set(value):
 		data = value.new()
 		data.hp_changed.connect(_on_data_hp_changed)
 		data.display_damage.connect(_on_data_display_damage)
-		texture_normal = data.sprite
+		if _sprite:
+			_sprite.texture = data.sprite
 		position = ENEMY_POSITIONS[data.pos]
 
-func _on_data_display_damage() -> void:
+func _on_data_display_damage(instance_sprite: Texture) -> void:
+	print('is:', instance_sprite)
+	_instance.texture = instance_sprite
 	print(data.name, ' takes damage')
 	_animation_player.play("basic_damage")
 	

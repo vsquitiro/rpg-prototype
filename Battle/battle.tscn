@@ -147,18 +147,14 @@ script = ExtResource("11_706sf")
 
 [node name="EnemyButton1" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=1627467683 instance=ExtResource("4_y2316")]
 layout_mode = 0
-offset_left = 113.0
-offset_top = 41.0
-offset_right = 153.0
-offset_bottom = 81.0
+offset_right = 40.0
+offset_bottom = 40.0
 data = ExtResource("8_lksgk")
 
 [node name="EnemyButton2" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=1505026012 instance=ExtResource("4_y2316")]
 layout_mode = 0
-offset_left = 113.0
-offset_top = 41.0
-offset_right = 153.0
-offset_bottom = 81.0
+offset_right = 40.0
+offset_bottom = 40.0
 data = ExtResource("9_4m2ey")
 
 [node name="PartyArea" type="Control" parent="MarginContainer/BattlePane/Combatants" unique_id=1774022952]
