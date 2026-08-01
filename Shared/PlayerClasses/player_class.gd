@@ -3,7 +3,8 @@ class_name PlayerClass extends Resource
 enum FRAME {
 	IDLE,
 	STANDBY,
-	ATTACKING
+	ATTACKING,
+	DAMAGED
 }
 
 @export var name : String = ''
@@ -11,6 +12,7 @@ enum FRAME {
 @export var idle_sprite: Texture = null
 @export var standby_sprite: Texture = null
 @export var attacking_sprite: Texture = null
+@export var damaged_sprite: Texture = null
 
 func get_sprite(frame: FRAME) -> Texture:
 	match frame:
@@ -20,6 +22,8 @@ func get_sprite(frame: FRAME) -> Texture:
 			return standby_sprite
 		FRAME.ATTACKING:
 			return attacking_sprite
+		FRAME.DAMAGED:
+			return damaged_sprite
 	return null
 
 # TODO set up the separated portrait and border

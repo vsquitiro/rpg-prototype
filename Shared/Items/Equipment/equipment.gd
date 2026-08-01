@@ -7,10 +7,12 @@
 @export var standby_sprite: Texture = null
 @export var idle_sprite: Texture = null
 @export var attacking_sprite: Texture = null
+@export var damaged_sprite: Texture = null
 
 @export var standby_shadow: Texture = null
 @export var idle_shadow: Texture = null
 @export var attacking_shadow: Texture = null
+@export var damaged_shadow: Texture = null
 
 
 func get_sprite_dict(frame: PlayerClass.FRAME) -> Dictionary:
@@ -20,7 +22,9 @@ func get_sprite_dict(frame: PlayerClass.FRAME) -> Dictionary:
 		PlayerClass.FRAME.STANDBY:
 			return { 'sprite': standby_sprite, 'shadow': standby_shadow }
 		PlayerClass.FRAME.ATTACKING:
-			return { 'sprite': attacking_sprite, 'shadow': attacking_shadow}
+			return { 'sprite': attacking_sprite, 'shadow': attacking_shadow }
+		PlayerClass.FRAME.DAMAGED:
+			return { 'sprite': damaged_sprite, 'shadow': damaged_shadow }
 	
 	return { 'sprite': null, 'shadow': null }
 

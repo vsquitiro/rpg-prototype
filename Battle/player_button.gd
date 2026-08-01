@@ -34,7 +34,9 @@ var data: BattleActorPlayer = null:
 				offhand = BATTLE_EQUIPMENT.instantiate()
 				add_child(offhand)
 				
-			set_sprite(PlayerClass.FRAME.IDLE)
+			# TODO set to normal
+			#set_sprite(PlayerClass.FRAME.IDLE)
+			set_sprite(PlayerClass.FRAME.DAMAGED)
 			
 			show()
 		else:

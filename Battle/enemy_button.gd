@@ -32,9 +32,8 @@ func _ready() -> void:
 			_sprite.texture = data.sprite
 		position = ENEMY_POSITIONS[data.pos]
 
+# TODO eventually need to figure out what to do when character is unequipped
 func _on_data_display_damage(instance_sprite: Texture) -> void:
-	print('is:', instance_sprite)
 	_instance.texture = instance_sprite
-	print(data.name, ' takes damage')
 	_animation_player.play("basic_damage")
 	

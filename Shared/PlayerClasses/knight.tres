@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d05u1t72ktijp" path="res://Art/Party/Combat/knight/attacking.png" id="1_roct6"]
 [ext_resource type="Texture2D" uid="uid://b5gg1ecfm2484" path="res://Art/Party/Stats/Portraits/portrait_KNIGHT.png" id="1_voak1"]
 [ext_resource type="Script" uid="uid://mbbtntn5lv3s" path="res://Shared/PlayerClasses/player_class.gd" id="1_wsxyy"]
+[ext_resource type="Texture2D" uid="uid://cxkeb2wxsn7ma" path="res://Art/Party/Combat/knight/damaged.png" id="2_10coe"]
 [ext_resource type="Texture2D" uid="uid://dsuog5ns40wdh" path="res://Art/Party/Combat/knight/standby.png" id="4_roct6"]
 
 [resource]
@@ -12,5 +13,6 @@ name = "Guardian"
 idle_sprite = ExtResource("1_0oyoq")
 standby_sprite = ExtResource("4_roct6")
 attacking_sprite = ExtResource("1_roct6")
+damaged_sprite = ExtResource("2_10coe")
 portrait_sprite = ExtResource("1_voak1")
 metadata/_custom_type_script = "uid://mbbtntn5lv3s"

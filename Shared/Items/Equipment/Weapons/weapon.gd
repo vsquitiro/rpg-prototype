@@ -18,6 +18,8 @@ func get_position_dict(frame: PlayerClass.FRAME) -> Dictionary:
 					return { 'position': Vector2(-3,-10), 'order': 0 }
 				PlayerClass.FRAME.ATTACKING:
 					return { 'position': Vector2(6,13), 'order': 0 }
+				PlayerClass.FRAME.DAMAGED:
+					return { 'position': Vector2(2,11), 'order': 1 }
 	return {}
 
 func get_instant_pos() -> Vector2:
