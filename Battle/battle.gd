@@ -29,7 +29,6 @@ func _ready() -> void:
 	goto_next_player()
 
 func goto_next_player() -> void:
-	# TODO not sure if I love this approach
 	if current_player_index > -1:
 		# TODO make a function to handle all aspects of activating/disactivating
 		var inactive_hex = party[current_player_index].pos
@@ -39,10 +38,8 @@ func goto_next_player() -> void:
 	
 	if current_player_index >= Data.party.size():
 		get_viewport().gui_release_focus()
-		# TODO releasing the viewport, not sure why still focusing on the enemy, moving for now
 		_commands_menu.button_focus()
 		_menu_cursor.hide()
-		# TODO hide info pane cursor selection for now, but eventually hijack for battle
 		_info_pane.hide()
 		
 		# TODO eventually genericize this, but for prototype use two snarl_bat enemies
@@ -54,7 +51,6 @@ func goto_next_player() -> void:
 			
 		_commands.hide()
 		await(event_queue.run())
-		# TODO not sure about this
 		current_player_index = 0
 		
 	#TODO check if player is alive
@@ -77,9 +73,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				menu_target = MENU_TARGET.OPTIONS
 				_handle_focus_swap([_commands_menu])
 				_commands_menu.button_focus()
-
-func _on_command_menu_button_focused(_button: BaseButton) -> void:
-	pass # TODO might not need this
 
 func _on_command_menu_button_pressed(button: BaseButton) -> void:
 	match button.text:

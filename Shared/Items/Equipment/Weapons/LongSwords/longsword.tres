@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="WeaponType" format=3 uid="uid://d0gaa6nxtmqdb"]
+
+[ext_resource type="Script" uid="uid://c5e218eb834nf" path="res://Shared/Items/Equipment/Weapons/weapon_type.gd" id="1_5eyph"]
+[ext_resource type="Texture2D" uid="uid://lpvyg8q272qn" path="res://Art/Items/Equipment/Shadows/Longsword/attacking.png" id="1_hwtke"]
+[ext_resource type="Texture2D" uid="uid://d3alnnl1fd8q6" path="res://Art/Items/Equipment/Shadows/Longsword/damaged.png" id="2_fyafv"]
+[ext_resource type="Texture2D" uid="uid://cwp5ybhenkpsr" path="res://Art/Items/Equipment/Shadows/Longsword/idle.png" id="3_acy65"]
+[ext_resource type="Texture2D" uid="uid://ca6bst6rrphxa" path="res://Art/Items/Equipment/Shadows/Longsword/standby.png" id="5_bt63d"]
+
+[resource]
+script = ExtResource("1_5eyph")
+instant_pos = Vector2(-10, -17)
+name = "Longsword"
+idle_shadow = ExtResource("3_acy65")
+idle_pos = Vector2(10, 7)
+standby_shadow = ExtResource("5_bt63d")
+standby_pos = Vector2(-3, -10)
+attacking_shadow = ExtResource("1_hwtke")
+attacking_pos = Vector2(6, 13)
+damaged_shadow = ExtResource("2_fyafv")
+damaged_pos = Vector2(2, 11)
+damaged_order = 1
+metadata/_custom_type_script = "uid://c5e218eb834nf"

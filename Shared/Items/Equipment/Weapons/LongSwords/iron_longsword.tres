@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://lgc7fngmxgas"]
+
+[ext_resource type="Texture2D" uid="uid://drwmkvii584ww" path="res://Art/Items/Equipment/Weapons/IronLongsword/attacking.png" id="1_bxkfp"]
+[ext_resource type="Texture2D" uid="uid://duju7m75hx4h0" path="res://Art/Items/Equipment/Weapons/IronLongsword/damaged.png" id="2_un2il"]
+[ext_resource type="Texture2D" uid="uid://gr505cel4fjs" path="res://Art/Items/Equipment/Weapons/IronLongsword/idle.png" id="3_actem"]
+[ext_resource type="Texture2D" uid="uid://bta5gc45kkn6b" path="res://Art/Items/Equipment/Weapons/IronLongsword/instant.png" id="4_eeb4v"]
+[ext_resource type="Script" uid="uid://yolpbao0f4xc" path="res://Shared/Items/Equipment/Weapons/weapon.gd" id="5_r8ngl"]
+[ext_resource type="Texture2D" uid="uid://bduuml33o5jm4" path="res://Art/Items/Equipment/Weapons/IronLongsword/standby.png" id="6_xgrck"]
+[ext_resource type="Resource" uid="uid://d0gaa6nxtmqdb" path="res://Shared/Items/Equipment/Weapons/LongSwords/longsword.tres" id="7_o7qm6"]
+
+[resource]
+script = ExtResource("5_r8ngl")
+type = ExtResource("7_o7qm6")
+instant_sprite = ExtResource("4_eeb4v")
+name = "Iron Longsword"
+standby_sprite = ExtResource("6_xgrck")
+idle_sprite = ExtResource("3_actem")
+attacking_sprite = ExtResource("1_bxkfp")
+damaged_sprite = ExtResource("2_un2il")
+metadata/_custom_type_script = "uid://yolpbao0f4xc"

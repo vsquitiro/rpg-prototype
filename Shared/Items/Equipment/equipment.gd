@@ -1,4 +1,4 @@
-@abstract class_name Equipment extends Resource
+class_name Equipment extends Resource
 
 @export var name: String = ''
 
@@ -9,23 +9,15 @@
 @export var attacking_sprite: Texture = null
 @export var damaged_sprite: Texture = null
 
-@export var standby_shadow: Texture = null
-@export var idle_shadow: Texture = null
-@export var attacking_shadow: Texture = null
-@export var damaged_shadow: Texture = null
-
-
-func get_sprite_dict(frame: PlayerClass.FRAME) -> Dictionary:
+func get_sprite(frame: PlayerClass.FRAME) -> Texture:
 	match frame:
 		PlayerClass.FRAME.IDLE:
-			return { 'sprite': idle_sprite, 'shadow': idle_shadow }
+			return idle_sprite
 		PlayerClass.FRAME.STANDBY:
-			return { 'sprite': standby_sprite, 'shadow': standby_shadow }
+			return standby_sprite
 		PlayerClass.FRAME.ATTACKING:
-			return { 'sprite': attacking_sprite, 'shadow': attacking_shadow }
+			return attacking_sprite
 		PlayerClass.FRAME.DAMAGED:
-			return { 'sprite': damaged_sprite, 'shadow': damaged_shadow }
+			return damaged_sprite
 	
-	return { 'sprite': null, 'shadow': null }
-
-@abstract func get_position_dict(frame: PlayerClass.FRAME) -> Dictionary
+	return null

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Weapon" format=3 uid="uid://curtyk0twxw56"]
+
+[ext_resource type="Texture2D" uid="uid://dbuxfccwa6atq" path="res://Art/Items/Equipment/Weapons/CopperLongsword/attacking.png" id="1_txg4p"]
+[ext_resource type="Texture2D" uid="uid://bx773oleatxet" path="res://Art/Items/Equipment/Weapons/CopperLongsword/damaged.png" id="2_p062a"]
+[ext_resource type="Texture2D" uid="uid://vgtfsl2j0sbd" path="res://Art/Items/Equipment/Weapons/CopperLongsword/idle.png" id="3_oxgod"]
+[ext_resource type="Texture2D" uid="uid://onrbmtexn7hc" path="res://Art/Items/Equipment/Weapons/CopperLongsword/instant.png" id="4_0p5mv"]
+[ext_resource type="Script" uid="uid://yolpbao0f4xc" path="res://Shared/Items/Equipment/Weapons/weapon.gd" id="5_mw67k"]
+[ext_resource type="Texture2D" uid="uid://ddaygs5hmw686" path="res://Art/Items/Equipment/Weapons/CopperLongsword/standby.png" id="6_hy2d1"]
+[ext_resource type="Resource" uid="uid://d0gaa6nxtmqdb" path="res://Shared/Items/Equipment/Weapons/LongSwords/longsword.tres" id="7_nx3cu"]
+
+[resource]
+script = ExtResource("5_mw67k")
+type = ExtResource("7_nx3cu")
+instant_sprite = ExtResource("4_0p5mv")
+name = "Copper Longsword"
+standby_sprite = ExtResource("6_hy2d1")
+idle_sprite = ExtResource("3_oxgod")
+attacking_sprite = ExtResource("1_txg4p")
+damaged_sprite = ExtResource("2_p062a")
+metadata/_custom_type_script = "uid://yolpbao0f4xc"

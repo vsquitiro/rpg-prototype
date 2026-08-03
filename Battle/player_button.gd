@@ -1,5 +1,8 @@
 class_name PlayerButton extends BattleActorButton
 
+@onready var _sprite: TextureRect = $Sprite
+@onready var _animation_player: AnimationPlayer = $AnimationPlayer
+
 const BATTLE_EQUIPMENT: PackedScene = preload("res://Battle/battle_equipment.tscn")
 
 const PARTY_POSITIONS: Array[Vector2] = [
@@ -11,6 +14,7 @@ const PARTY_POSITIONS: Array[Vector2] = [
 	Vector2(87,-22),
 ]
 
+var current_frame: PlayerClass.FRAME = PlayerClass.FRAME.IDLE
 var weapon: BattleEquipment = null
 var offhand: BattleEquipment = null
 
@@ -24,26 +28,26 @@ var data: BattleActorPlayer = null:
 		if data:
 			data.hp_changed.connect(_on_data_hp_changed)
 			data.attack_initiated.connect(_on_attack_initiated)
+			data.display_damage.connect(_on_display_damage)
 			position = PARTY_POSITIONS[data.pos]
 			
 			if data.weapon:
 				weapon = BATTLE_EQUIPMENT.instantiate()
-				add_child(weapon)
-				weapon.set_instant(data.weapon.instant_sprite, data.weapon.get_instant_pos())
+				_sprite.add_child(weapon)
+				weapon.set_instant(data.weapon.instant_sprite, data.weapon.type.instant_pos)
 			if data.offhand:
 				offhand = BATTLE_EQUIPMENT.instantiate()
-				add_child(offhand)
+				_sprite.add_child(offhand)
 				
-			# TODO set to normal
-			#set_sprite(PlayerClass.FRAME.IDLE)
-			set_sprite(PlayerClass.FRAME.DAMAGED)
+			set_sprite(PlayerClass.FRAME.IDLE)
 			
 			show()
 		else:
 			hide()
 
 func set_sprite(frame: PlayerClass.FRAME):
-	texture_normal = data.player_class.get_sprite(frame)
+	current_frame = frame
+	_sprite.texture = data.player_class.get_sprite(frame)
 	if data.weapon && weapon:
 		weapon.set_sprite(data.weapon, frame)
 	if data.offhand && offhand:
@@ -54,4 +58,11 @@ func _on_attack_initiated() -> void:
 	weapon.flash_instant()
 	await(get_tree().create_timer(0.5).timeout)
 	set_sprite(PlayerClass.FRAME.IDLE)
-	return
+
+func _on_display_damage(_instant) -> void:
+	var resetFrame = current_frame
+	set_sprite(PlayerClass.FRAME.DAMAGED)
+	_animation_player.play("basic_damage")
+	await(get_tree().create_timer(0.5).timeout)	
+	set_sprite(resetFrame)
+	

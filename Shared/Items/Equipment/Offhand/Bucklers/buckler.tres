@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="OffhandType" format=3 uid="uid://dw7e4x7lx25r8"]
+
+[ext_resource type="Texture2D" uid="uid://bnldgwokgbch" path="res://Art/Items/Equipment/Shadows/Buckler/attacking.png" id="1_3r57u"]
+[ext_resource type="Script" uid="uid://b60b6wi64domd" path="res://Shared/Items/Equipment/Offhand/offhand_type.gd" id="1_71r2b"]
+[ext_resource type="Texture2D" uid="uid://cwlxkat6rqy7p" path="res://Art/Items/Equipment/Shadows/Buckler/damaged.png" id="2_txk4j"]
+[ext_resource type="Texture2D" uid="uid://btp1tapie6uiv" path="res://Art/Items/Equipment/Shadows/Buckler/idle.png" id="3_mxh2p"]
+[ext_resource type="Texture2D" uid="uid://ckfrswiau6e0n" path="res://Art/Items/Equipment/Shadows/Buckler/standby.png" id="5_bko75"]
+
+[resource]
+script = ExtResource("1_71r2b")
+name = "Buckler"
+idle_shadow = ExtResource("3_mxh2p")
+idle_pos = Vector2(13, 8)
+idle_order = 1
+standby_shadow = ExtResource("5_bko75")
+standby_pos = Vector2(9, 9)
+attacking_shadow = ExtResource("1_3r57u")
+attacking_pos = Vector2(21, 8)
+damaged_shadow = ExtResource("2_txk4j")
+damaged_pos = Vector2(9, 8)
+metadata/_custom_type_script = "uid://b60b6wi64domd"
