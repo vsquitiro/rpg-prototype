@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dicsu7ywgkhoo"
-path="res://.godot/imported/snarl_bat.png-63dea16326091375bd92aebf06d1a69f.ctex"
+path="res://.godot/imported/snarl_bat.png-1a46e8172403fabb518869392f3e3b6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Enemies/snarl_bat.png"
-dest_files=["res://.godot/imported/snarl_bat.png-63dea16326091375bd92aebf06d1a69f.ctex"]
+source_file="res://Art/Enemies/Bats/snarl_bat.png"
+dest_files=["res://.godot/imported/snarl_bat.png-1a46e8172403fabb518869392f3e3b6e.ctex"]
 
 [params]
 

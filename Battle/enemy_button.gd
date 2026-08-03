@@ -27,6 +27,7 @@ func _ready() -> void:
 	set(value):
 		data = value.new()
 		data.hp_changed.connect(_on_data_hp_changed)
+		data.attack_initiated.connect(_on_attack_initiated)
 		data.display_damage.connect(_on_data_display_damage)
 		if _sprite:
 			_sprite.texture = data.sprite
@@ -37,3 +38,19 @@ func _on_data_display_damage(instance_sprite: Texture) -> void:
 	_instance.texture = instance_sprite
 	_animation_player.play("basic_damage")
 	
+func _on_attack_initiated() -> void:
+	print('THIS GUYS IS ATTACKING')
+	_sprite.texture = data.attacking_sprite
+	await(get_tree().create_timer(0.025).timeout)
+	_sprite.texture = data.sprite
+	await(get_tree().create_timer(0.025).timeout)
+	_sprite.texture = data.attacking_sprite
+	await(get_tree().create_timer(0.025).timeout)
+	_sprite.texture = data.sprite
+	await(get_tree().create_timer(0.025).timeout)
+	_sprite.texture = data.attacking_sprite
+	await(get_tree().create_timer(0.025).timeout)
+	
+	
+	_sprite.texture = data.sprite
+	pass

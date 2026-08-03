@@ -25,8 +25,8 @@ func run() -> void:
 	match event.command:
 		COMMAND.ATTACK:
 			# TODO we need to make sure the actor is still in a state to continue this actions
+			await(event.actor.attack())
 			if event.actor is BattleActorPlayer:
-				await(event.actor.attack())
 				event.target.take_damage(event.actor.weapon.instant_sprite)
 			else:
 				event.target.take_damage(null)

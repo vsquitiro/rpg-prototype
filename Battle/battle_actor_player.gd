@@ -1,7 +1,5 @@
 class_name BattleActorPlayer extends BattleActor
 
-signal attack_initiated()
-
 const BACK_ROW_START_INDEX: int = 3
 
 @export var player_class: PlayerClass = null
@@ -14,6 +12,3 @@ func update_row():
 func init() -> void:
 	hp = hp_max
 	update_row()
-	
-func attack() -> void:
-	attack_initiated.emit()

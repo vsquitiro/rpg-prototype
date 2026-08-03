@@ -3,6 +3,7 @@ class_name BattleActorEnemy extends BattleActor
 const BACK_ROW_START_INDEX: int = 4
 
 @export var sprite : Texture = null
+@export var attacking_sprite : Texture = null
 
 @export var tp_max = 100
 

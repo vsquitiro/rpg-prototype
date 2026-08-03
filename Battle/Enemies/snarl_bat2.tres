@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="BattleActorEnemy" format=3 uid="uid://cb84k3h33pium"]
 
+[ext_resource type="Texture2D" uid="uid://d1idvp3adawqd" path="res://Art/Enemies/Bats/bat_greyscale.png" id="1_ln0oc"]
 [ext_resource type="Script" uid="uid://c8iijfboe6km" path="res://Battle/battle_actor_enemy.gd" id="1_snu7b"]
-[ext_resource type="Texture2D" uid="uid://dicsu7ywgkhoo" path="res://Art/Enemies/snarl_bat.png" id="2_b4s3c"]
+[ext_resource type="Texture2D" uid="uid://dicsu7ywgkhoo" path="res://Art/Enemies/Bats/snarl_bat.png" id="3_i3arf"]
 
 [resource]
 script = ExtResource("1_snu7b")
-sprite = ExtResource("2_b4s3c")
+sprite = ExtResource("3_i3arf")
+attacking_sprite = ExtResource("1_ln0oc")
 row = 1
 pos = 4
 name = "SnarlBat B"
