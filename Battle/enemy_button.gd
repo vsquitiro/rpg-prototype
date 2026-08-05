@@ -3,6 +3,8 @@ class_name EnemyButton extends BattleActorButton
 @onready var _sprite: TextureRect = $Sprite
 @onready var _instance: TextureRect = $Instance
 @onready var _animation_player: AnimationPlayer = $AnimationPlayer
+@onready var _ko_screen: AnimatedSprite2D = $KoScreen
+
 
 const ENEMY_POSITIONS: Array[Vector2] = [
 	Vector2(151,39),
@@ -29,6 +31,7 @@ func _ready() -> void:
 		data.hp_changed.connect(_on_data_hp_changed)
 		data.attack_initiated.connect(_on_attack_initiated)
 		data.display_damage.connect(_on_data_display_damage)
+		data.ko_initiated.connect(_on_ko_initiated)
 		if _sprite:
 			_sprite.texture = data.sprite
 		position = ENEMY_POSITIONS[data.pos]
@@ -39,18 +42,15 @@ func _on_data_display_damage(instance_sprite: Texture) -> void:
 	_animation_player.play("basic_damage")
 	
 func _on_attack_initiated() -> void:
-	print('THIS GUYS IS ATTACKING')
-	_sprite.texture = data.attacking_sprite
-	await(get_tree().create_timer(0.025).timeout)
-	_sprite.texture = data.sprite
-	await(get_tree().create_timer(0.025).timeout)
-	_sprite.texture = data.attacking_sprite
-	await(get_tree().create_timer(0.025).timeout)
-	_sprite.texture = data.sprite
-	await(get_tree().create_timer(0.025).timeout)
-	_sprite.texture = data.attacking_sprite
-	await(get_tree().create_timer(0.025).timeout)
+	for i in range(3):
+		_sprite.texture = data.attacking_sprite
+		await(get_tree().create_timer(Timers.ENEMY_ATTACK_FLASH).timeout)
+		_sprite.texture = data.sprite
+		await(get_tree().create_timer(Timers.ENEMY_ATTACK_FLASH).timeout)
+
+func _on_ko_initiated() -> void:
+	_sprite.z_index = -10
+	_ko_screen.play()
+	await(get_tree().create_timer(Timers.ENEMY_KO).timeout)
+	queue_free()
 	
-	
-	_sprite.texture = data.sprite
-	pass

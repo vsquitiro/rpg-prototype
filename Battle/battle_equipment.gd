@@ -22,5 +22,5 @@ func set_instant(sprite: Texture, pos: Vector2) -> void:
 
 func flash_instant() -> void:
 	instant_sprite.show()
-	await(get_tree().create_timer(0.1).timeout)
+	await(get_tree().create_timer(Timers.INSTANT_FLASH).timeout)
 	instant_sprite.hide()

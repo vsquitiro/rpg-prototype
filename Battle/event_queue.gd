@@ -22,17 +22,28 @@ func run() -> void:
 	
 	print("Running event: ", event.actor.name, " ", COMMAND.keys()[event.command], " ", event.target.name)
 	
+	if event.actor.hp == 0:
+		await run()
+		return
+	
+	# TODO set up target if og target is defeated
+	
 	match event.command:
 		COMMAND.ATTACK:
 			# TODO we need to make sure the actor is still in a state to continue this actions
 			await(event.actor.attack())
-			if event.actor is BattleActorPlayer:
+			if event.actor is BattleActorPlayer and event.target is BattleActorEnemy:
 				event.target.take_damage(event.actor.weapon.instant_sprite)
 			else:
 				event.target.take_damage(null)
-			print('event queue calls for heal_hurt')
-			await(get_tree().create_timer(0.2).timeout)
-			event.target.heal_hurt(-1)
+			await(get_tree().create_timer(Timers.HP_FLASH_DELAY).timeout)
+			event.target.heal_hurt(-4)
 	
-	await(get_tree().create_timer(0.5).timeout)
+	
+	await(get_tree().create_timer(Timers.BASIC_TURN).timeout)
+	
+	if event.target.hp <= 0:
+		event.target.ko()
+		await(get_tree().create_timer(Timers.ENEMY_KO).timeout)
+	
 	await run()

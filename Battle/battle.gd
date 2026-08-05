@@ -90,7 +90,6 @@ func _on_party_buttons_button_pressed(button: BaseButton) -> void:
 
 func _target_battle_actor(target: BattleActor) -> void:
 	print(target.name, ": HP=", target.hp, "/", target.hp_max)
-
 	event_queue.add(command, Data.party[current_player_index], target)
 	goto_next_player()
 

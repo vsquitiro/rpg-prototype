@@ -26,4 +26,4 @@ func toggle_active_window(active: bool):
 	_active_player_window.visible = active
 
 func _on_data_hp_changed(hp: int, _hp_delta: int) -> void:
-	_hp.text = str(hp)
+	_hp.text = str(hp) + '/'

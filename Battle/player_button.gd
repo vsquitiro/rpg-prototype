@@ -56,13 +56,13 @@ func set_sprite(frame: PlayerClass.FRAME):
 func _on_attack_initiated() -> void:
 	set_sprite(PlayerClass.FRAME.ATTACKING)
 	weapon.flash_instant()
-	await(get_tree().create_timer(0.5).timeout)
+	await(get_tree().create_timer(Timers.BASIC_TURN).timeout)
 	set_sprite(PlayerClass.FRAME.IDLE)
 
 func _on_display_damage(_instant) -> void:
 	var resetFrame = current_frame
 	set_sprite(PlayerClass.FRAME.DAMAGED)
 	_animation_player.play("basic_damage")
-	await(get_tree().create_timer(0.5).timeout)	
+	await(get_tree().create_timer(Timers.BASIC_TURN).timeout)	
 	set_sprite(resetFrame)
 	
