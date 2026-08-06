@@ -29,7 +29,6 @@ func _ready() -> void:
 	set(value):
 		data = value
 		if data: 
-			print('here we go')
 			data = value
 			data.hp_changed.connect(_on_data_hp_changed)
 			data.attack_initiated.connect(_on_attack_initiated)
@@ -38,8 +37,9 @@ func _ready() -> void:
 			if _sprite:
 				_sprite.texture = data.sprite
 			position = ENEMY_POSITIONS[data.pos]
+			show()
 		else:
-			queue_free()
+			hide()
 
 # TODO eventually need to figure out what to do when character is unequipped
 func _on_data_display_damage(instance_sprite: Texture) -> void:
