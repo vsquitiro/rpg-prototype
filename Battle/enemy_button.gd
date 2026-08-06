@@ -27,14 +27,19 @@ func _ready() -> void:
 
 @export var data: BattleActorEnemy = null :
 	set(value):
-		data = value.new()
-		data.hp_changed.connect(_on_data_hp_changed)
-		data.attack_initiated.connect(_on_attack_initiated)
-		data.display_damage.connect(_on_data_display_damage)
-		data.ko_initiated.connect(_on_ko_initiated)
-		if _sprite:
-			_sprite.texture = data.sprite
-		position = ENEMY_POSITIONS[data.pos]
+		data = value
+		if data: 
+			print('here we go')
+			data = value
+			data.hp_changed.connect(_on_data_hp_changed)
+			data.attack_initiated.connect(_on_attack_initiated)
+			data.display_damage.connect(_on_data_display_damage)
+			data.ko_initiated.connect(_on_ko_initiated)
+			if _sprite:
+				_sprite.texture = data.sprite
+			position = ENEMY_POSITIONS[data.pos]
+		else:
+			queue_free()
 
 # TODO eventually need to figure out what to do when character is unequipped
 func _on_data_display_damage(instance_sprite: Texture) -> void:

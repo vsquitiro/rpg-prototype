@@ -26,7 +26,14 @@ func run() -> void:
 		await run()
 		return
 	
-	# TODO set up target if og target is defeated
+	if event.target.hp == 0:
+		var next_target_index: int = Data.enemies.find_custom(is_active)
+		if next_target_index == -1:
+			print('Battle should be over')
+			await run()
+			return
+		else:
+			event.target = Data.enemies[next_target_index]
 	
 	match event.command:
 		COMMAND.ATTACK:
@@ -37,7 +44,7 @@ func run() -> void:
 			else:
 				event.target.take_damage(null)
 			await(get_tree().create_timer(Timers.HP_FLASH_DELAY).timeout)
-			event.target.heal_hurt(-4)
+			event.target.heal_hurt(-10)
 	
 	
 	await(get_tree().create_timer(Timers.BASIC_TURN).timeout)
@@ -47,3 +54,8 @@ func run() -> void:
 		await(get_tree().create_timer(Timers.ENEMY_KO).timeout)
 	
 	await run()
+
+# TODO so far only detects if target is KO'd
+func is_active(target):
+	return target.hp != 0
+		

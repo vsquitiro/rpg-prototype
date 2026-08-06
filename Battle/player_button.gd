@@ -64,5 +64,8 @@ func _on_display_damage(_instant) -> void:
 	set_sprite(PlayerClass.FRAME.DAMAGED)
 	_animation_player.play("basic_damage")
 	await(get_tree().create_timer(Timers.BASIC_TURN).timeout)	
-	set_sprite(resetFrame)
+	if resetFrame == PlayerClass.FRAME.ATTACKING:
+		set_sprite(PlayerClass.FRAME.IDLE)
+	else:
+		set_sprite(resetFrame)
 	

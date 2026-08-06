@@ -8,8 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dgrebv4tjn8en" path="res://Battle/enemy_button.tscn" id="4_y2316"]
 [ext_resource type="Script" uid="uid://bq2kclqshan2" path="res://Battle/info_pane.gd" id="5_ioj8t"]
 [ext_resource type="PackedScene" uid="uid://xwp26gj1un33" path="res://Battle/enemy_hex.tscn" id="7_dh7om"]
-[ext_resource type="Resource" uid="uid://bdq6431q2ieyj" path="res://Battle/Enemies/snarl_bat1.tres" id="8_lksgk"]
-[ext_resource type="Resource" uid="uid://cb84k3h33pium" path="res://Battle/Enemies/snarl_bat2.tres" id="9_4m2ey"]
+[ext_resource type="Script" uid="uid://b2n5bxr36v2c5" path="res://Battle/enemy_buttons.gd" id="8_g8yvd"]
 [ext_resource type="PackedScene" uid="uid://fb6m0u08pfmv" path="res://Battle/party_hex.tscn" id="9_tsc8h"]
 [ext_resource type="PackedScene" uid="uid://csnv22ig4b8m7" path="res://Battle/player_button.tscn" id="10_3ym65"]
 [ext_resource type="Script" uid="uid://3pcstyf257qr" path="res://Battle/party_hexes.gd" id="10_iurou"]
@@ -143,21 +142,55 @@ offset_bottom = 48.0
 anchors_preset = 0
 offset_right = 200.0
 offset_bottom = 88.0
-script = ExtResource("11_706sf")
+script = ExtResource("8_g8yvd")
 
 [node name="EnemyButton1" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=1627467683 instance=ExtResource("4_y2316")]
 layout_mode = 0
 offset_left = 0.0
 offset_right = 40.0
 offset_bottom = 40.0
-data = ExtResource("8_lksgk")
 
 [node name="EnemyButton2" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=1505026012 instance=ExtResource("4_y2316")]
 layout_mode = 0
 offset_left = 0.0
 offset_right = 40.0
 offset_bottom = 40.0
-data = ExtResource("9_4m2ey")
+
+[node name="EnemyButton3" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=745908654 instance=ExtResource("4_y2316")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyButton4" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=520618816 instance=ExtResource("4_y2316")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyButton5" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=892183406 instance=ExtResource("4_y2316")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyButton6" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=1547093633 instance=ExtResource("4_y2316")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyButton7" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=1900461390 instance=ExtResource("4_y2316")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyButton8" parent="MarginContainer/BattlePane/Combatants/EnemyArea/EnemyButtons" unique_id=1510312156 instance=ExtResource("4_y2316")]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="PartyArea" type="Control" parent="MarginContainer/BattlePane/Combatants" unique_id=1774022952]
 anchors_preset = 0
